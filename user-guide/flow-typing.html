@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="has-spaced-navbar-fixed-top">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Strongly Typed Assertions</title>
+
+<!-- CSS  -->
+<link href="/css/bulma.min.css" type="text/css"
+      rel="stylesheet" media="screen,projection">
+
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="generator" content="JBake v2.6.1">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar is-spaced is-fixed-top is-black" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/img/logo-white-28.png" alt="Strikt">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        <a class="navbar-item" href="/"><span class="icon has-text-info"><i
+          class="fas fa-home"></i></span><span>Home</span></a>
+        <a class="navbar-item" href="/about.html"><span class="icon has-text-info"><i
+          class="fas fa-info-circle"></i></span><span>About</span></a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"><span class="icon has-text-info"><i
+            class="fas fa-book"></i></span><span>User guide</span></a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="/user-guide/getting-started.html">Getting started</a>
+            <a class="navbar-item" href="/user-guide/assertion-styles.html">Assertion styles</a>
+            <a class="navbar-item" href="/user-guide/common-patterns.html">Common Assertion Patterns</a>
+            <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
+            <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
+            <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="section">
+  <div class="container">
+    <div class="content is-medium"><h1>Strongly Typed Assertions</h1> 
+<p>Strikt's API is designed to work with Kotlin's strong type system.</p> 
+<p>Strikt's assertion API uses the class <code>Assertion&lt;T&gt;</code>, with the generic type <code>T</code> representing the (declared) type of the assertion subject.<br> Assertion functions such as <code>isEqualTo</code> are implemented as extension functions on <code>Assertion</code> with an appropriate generic type.</p> 
+<p>For example <code>isEqualTo</code> is an extension function on <code>Assertion&lt;Any?&gt;</code> as it's useful for many types of subject whereas <code>isEqualToIgnoringCase</code> is an extension function on <code>Assertion&lt;CharSequence&gt;</code> since it only makes sense to use it on string-like things.</p> 
+<p>Some assertion functions will return an <code>Assertion</code> <em>different</em>, more specific, generic type to the one they were called on.</p> 
+<h2>Nullable subjects</h2> 
+<p>For example, if the subject of an assertion is a nullable type (in other words it's an <code>Assertion&lt;T?&gt;</code>) the assertion methods <code>isNull()</code> and <code>isNotNull()</code> are available.<br> The return type of <code>isNotNull()</code> is <code>Assertion&lt;T&gt;</code> because we now <em>know</em> the subject is not null.<br> You will find IDE code-completion will no longer offer the <code>isNull()</code> and <code>isNotNull()</code> assertion methods.</p> 
+<h2>Narrowing assertions</h2> 
+<p>Another example is making assertions about a subject's specific runtime type, or "narrowing".</p> 
+<p>For example:</p> 
+<pre><code class="language-kotlin">val subject: Map&lt;String, Any&gt; = mapOf("count" to 1, "name" to "Rob")
+expect(subject.get("count"))
+  .isA&lt;Number&gt;()
+  .isGreaterThan(0)
+
+expect(subject.get("name"))
+  .isA&lt;String&gt;()
+  .hasLength(3)
+</code></pre> 
+<p>The return type of the subject map's <code>get()</code> method is <code>Any</code> but using the narrowing assertion <code>isA&lt;T&gt;()</code> we can both assert the type of the value and, because the compiler now knows it is dealing with an <code>Assertion&lt;String&gt;</code> or an <code>Assertion&lt;Number&gt;</code>, we can use more specialized assertion methods that are only available for those subject types.</p> 
+<p>Without the <code>isA&lt;T&gt;()</code> assertion the code would not compile:</p> 
+<pre><code class="language-kotlin">val subject: Map&lt;String, Any&gt; = mapOf("count" to 1, "name" to "Rob")
+expect(subject.get("count"))
+  .isGreaterThan(0) 
+  // isGreaterThan does not exist on Assertion&lt;Any&gt;
+  
+expect(subject.get("name"))
+  .hasLength(3) 
+  // hasLength does not exist on Assertion&lt;Any&gt;
+</code></pre> 
+<p>This mechanism means that IDE code-completion is optimally helpful as only assertion methods that are appropriate to the subject type will be suggested.</p></div>
+  <nav class="pagination is-medium" role="navigation" aria-label="pagination">
+    <a class="pagination-previous button is-large is-link is-outlined"
+       href="common-patterns.html" >
+      <span class="icon">
+        <i class="fas fa-arrow-left"></i>
+      </span>
+    </a>
+    <a class="pagination-next button is-large is-link is-outlined" href="mapping.html"
+       >
+      <span class="icon">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  </nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-left-tablet has-text-centered-mobile">
+          <a href="https://github.com/robfletcher/strikt/" class="button is-dark">
+            <span class="icon"><i class="fab fa-lg fa-github"></i></span><span>GitHub</span>
+          </a>
+          <a href="https://kotlinlang.slack.com/messages/CAR7KJ96J" class="button is-danger">
+            <span class="icon"><i class="fab fa-lg fa-slack-hash"></i></span><span>Slack</span>
+          </a>
+          <a href="https://twitter.com/stri_kt" class="button is-info">
+            <span class="icon"><i class="fab fa-lg fa-twitter"></i></span><span>Twitter</span>
+          </a>
+        </p>
+      </div>
+      <div class="column">
+        <p class="has-text-right-tablet has-text-centered-mobile">
+          <a href="https://bulma.io/">
+            <img src="/img/made-with-bulma--semiblack.png" alt="Bulma" width="171" height="32">
+          </a>
+          <a href="https://jbake.org">
+            <img src="/img/jbake_128x128.png" alt="JBake v2.6.1" width="32" height="32">
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/init.js"></script>
+</body>
+</html>

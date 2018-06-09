@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en" class="has-spaced-navbar-fixed-top">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Custom Assertions</title>
+
+<!-- CSS  -->
+<link href="/css/bulma.min.css" type="text/css"
+      rel="stylesheet" media="screen,projection">
+
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="generator" content="JBake v2.6.1">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar is-spaced is-fixed-top is-black" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/img/logo-white-28.png" alt="Strikt">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        <a class="navbar-item" href="/"><span class="icon has-text-info"><i
+          class="fas fa-home"></i></span><span>Home</span></a>
+        <a class="navbar-item" href="/about.html"><span class="icon has-text-info"><i
+          class="fas fa-info-circle"></i></span><span>About</span></a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"><span class="icon has-text-info"><i
+            class="fas fa-book"></i></span><span>User guide</span></a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="/user-guide/getting-started.html">Getting started</a>
+            <a class="navbar-item" href="/user-guide/assertion-styles.html">Assertion styles</a>
+            <a class="navbar-item" href="/user-guide/common-patterns.html">Common Assertion Patterns</a>
+            <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
+            <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
+            <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="section">
+  <div class="container">
+    <div class="content is-medium"><h1>Custom Assertions</h1> 
+<p>One of the aims of Strikt is that implementing your own assertions is <em>really, really</em> easy.<br> Assertion functions are <a href="https://kotlinlang.org/docs/reference/extensions.html">https://kotlinlang.org/docs/reference/extensions.html</a>[extension functions] on the interface <code>Assertion&lt;T&gt;</code>.</p> 
+<h2>Atomic assertions</h2> 
+<p>"Atomic" assertions produce a single message on failure.<br> They call <code>assert</code> passing a lambda with the assertion logic that calls <code>pass()</code> or <code>fail()</code>.</p> 
+<p>The standard assertions <code>isNull</code>, <code>isEqualTo</code>, <code>isA&lt;T&gt;</code> and many others are simple assertions implemented just like this.</p> 
+<p>Let's imagine we're implementing an assertion function for <code>java.time.LocalDate</code> that tests if the represented date is a leap day.</p> 
+<pre><code class="language-kotlin">fun Assertion&lt;LocalDate&gt;.isStTibsDay(): Assertion&lt;LocalDate&gt; =
+  assert("is St. Tib's Day") { 
+    when (MonthDay.from(subject)) {
+      MonthDay.of(2, 29) -&gt; pass()
+      else               -&gt; fail()
+    }
+  }
+</code></pre> 
+<p>Breaking this down:</p> 
+<ol> 
+ <li>We declare the assertion function applies only to <code>Assertion&lt;LocalDate&gt;</code>.</li> 
+ <li>Note that the function also returns <code>Assertion&lt;LocalDate&gt;</code> so we can include this assertion as part of a chain.</li> 
+ <li>We call <code>assert</code> passing a description of the assertion and a lambda with the assertion logic.</li> 
+ <li>If <code>subject</code> is the value we want we call <code>pass()</code> otherwise we call <code>fail()</code></li> 
+</ol> 
+<p>If this assertion fails it will produce a message like:</p> 
+<pre><code>Expect that 2018-05-01 (1 failure)
+    is St. Tib's Day 
+</code></pre> 
+<p>!!! note<br> The method <code>assert</code> accepts a description for the assertion being made and a lambda function <code>AssertionContext&lt;T&gt;.() -&gt; Unit</code>.<br> That <code>AssertionContext&lt;T&gt;</code> receiver provides the lambda everything it needs to access the <code>subject</code> of the assertion and report the result via the <code>pass()</code> or <code>fail()</code> method.</p> 
+<h2>Describing the "actual" value</h2> 
+<p>For assertions that perform a comparison between actual and expected values it is usually helpful to describe the value that was incorrect.<br> That way any assertion failure message will be more helpful.</p> 
+<p>In order to do this, Strikt provides an overridden version of <code>fail()</code> that accepts a message string and the actual value found.<br> The message string should contain a format placeholder for the value.</p> 
+<pre><code class="language-kotlin">fun Assertion&lt;LocalDate&gt;.isStTibsDay(): Assertion&lt;LocalDate&gt; =
+  assert("is St. Tib's Day") { 
+    when (MonthDay.from(subject)) {
+      MonthDay.of(2, 29) -&gt; pass()
+      else               -&gt; fail(
+        message = "in fact it is %s", 
+        actual = subject
+      )
+    }
+  }
+</code></pre> 
+<p>Now if the assertion fails there is a little more detail.</p> 
+<pre><code>Expect that 2018-05-01
+    is St. Tib's Day : in fact it is 2018-05-01
+</code></pre> 
+<p>In this case that's not terribly helpful but when dealing with properties, method return values, or the like it can save a lot of effort in identifying the precise cause of an error.</p> 
+<h2>Simple atomic assertions with boolean expressions</h2> 
+<p>For the simplest assertion functions, instead of using <code>assert</code> and calling <code>pass</code> or <code>fail</code>, you can use <code>passesIf</code> with a lambda whose receiver is the assertion subject that returns a boolean.</p> 
+<p>We can re-implement the example above like this:</p> 
+<pre><code class="language-kotlin">fun Assertion&lt;LocalDate&gt;.isStTibsDay(): Assertion&lt;LocalDate&gt; =
+  passesIf("is St. Tib's Day") { 
+    MonthDay.from(this) == MonthDay.of(2, 29)
+  }
+</code></pre> 
+<p>You should not use this form when you want to provide a meaningful description of the actual value but for simple assertions it's slightly less verbose.</p> 
+<h2>Composed assertions</h2> 
+<p>For more complex assertion implementations you can "nest" sub-assertions inside your overall assertion.<br> Composed assertions' results are reported under the overall result which is useful for providing detailed diagnostic information in case of a failure.</p> 
+<p>Composed assertions are useful for things like:</p> 
+<ul> 
+ <li>applying assertions to multiple properties of an object, for example for a field-by-field comparison.</li> 
+ <li>applying assertions to all elements of a collection or entries in a map, reporting on individual elements.</li> 
+</ul> 
+<p>Imagine we're creating an assertion function that tests fails if any element of a collection is <code>null</code>.</p> 
+<pre><code class="language-kotlin">fun &lt;T: Iterable&lt;E?&gt;, E&gt; Assertion&lt;T&gt;.containsNoNullElements(): Assertion&lt;T&gt; =
+  compose("does not contain any null elements") {
+    subject.forEach {
+      expect(it).isNotNull()
+    }
+  } then {
+    if (allPassed) pass() else fail()
+  }
+</code></pre> 
+<p>Breaking this down:</p> 
+<ol> 
+ <li>We declare the overall assertion function applies to an <code>Iterable</code> of a nullable element type <code>E</code>.</li> 
+ <li>We use the <code>compose</code> method instead of <code>assert</code>.</li> 
+ <li>Inside the <code>compose</code> block we make assertions about each element of the iterable subject.</li> 
+ <li>Inside the <code>then</code> block we pass or fail the overall assertion depending on whether the nested assertions all passed.</li> 
+</ol> 
+<p>The receiver of the block passed to <code>result</code> has the properties <code>allFailed</code>, <code>anyFailed</code>, <code>allPassed</code> and <code>anyPassed</code> along with <code>pass()</code> and <code>fail()</code> functions similar to those used in simple assertions.</p> 
+<p>If the assertion failed we'll see something like this:</p> 
+<pre><code>Expect that [catflap, null, rubberplant, marzipan] (1 failure) 
+    does not contain any null elements (1 failure)
+        Expect that null (1 failure) 
+            is not null  
+</code></pre> 
+<p>As well as the overall assertion failure message we get a detailed breakdown allowing us to easily find exactly where the problem is.</p> 
+<p>Several assertion functions in Strikt's standard assertions library use nested assertions.<br> For example, <code>Assertion&lt;Iterable&lt;E&gt;&gt;.all</code> applies assertions to each element of an <code>Iterable</code> then passes the overall assertion if (and only if) all those nested assertions passed (<code>allPassed</code>).<br> On the other hand <code>Assertion&lt;Iterable&lt;E&gt;&gt;.any</code> applies assertions to the elements of an <code>Iterable</code> but will pass the overall assertion if at least one of those nested assertions passed (<code>anyPassed</code>).<br> The <code>Assertion&lt;Iterable&lt;E&gt;&gt;.none</code> assertion passes only if <code>allFailed</code> is true for its nested assertions!</p></div>
+  <nav class="pagination is-medium" role="navigation" aria-label="pagination">
+    <a class="pagination-previous button is-large is-link is-outlined"
+       href="mapping.html" >
+      <span class="icon">
+        <i class="fas fa-arrow-left"></i>
+      </span>
+    </a>
+    <a class="pagination-next button is-large is-link is-outlined" disabled>
+      <span class="icon">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  </nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-left-tablet has-text-centered-mobile">
+          <a href="https://github.com/robfletcher/strikt/" class="button is-dark">
+            <span class="icon"><i class="fab fa-lg fa-github"></i></span><span>GitHub</span>
+          </a>
+          <a href="https://kotlinlang.slack.com/messages/CAR7KJ96J" class="button is-danger">
+            <span class="icon"><i class="fab fa-lg fa-slack-hash"></i></span><span>Slack</span>
+          </a>
+          <a href="https://twitter.com/stri_kt" class="button is-info">
+            <span class="icon"><i class="fab fa-lg fa-twitter"></i></span><span>Twitter</span>
+          </a>
+        </p>
+      </div>
+      <div class="column">
+        <p class="has-text-right-tablet has-text-centered-mobile">
+          <a href="https://bulma.io/">
+            <img src="/img/made-with-bulma--semiblack.png" alt="Bulma" width="171" height="32">
+          </a>
+          <a href="https://jbake.org">
+            <img src="/img/jbake_128x128.png" alt="JBake v2.6.1" width="32" height="32">
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/init.js"></script>
+</body>
+</html>

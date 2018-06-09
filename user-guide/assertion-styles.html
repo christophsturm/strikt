@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" class="has-spaced-navbar-fixed-top">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Assertion styles</title>
+
+<!-- CSS  -->
+<link href="/css/bulma.min.css" type="text/css"
+      rel="stylesheet" media="screen,projection">
+
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="generator" content="JBake v2.6.1">
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+        integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar is-spaced is-fixed-top is-black" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/img/logo-white-28.png" alt="Strikt">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+      </div>
+
+      <div class="navbar-end">
+        <a class="navbar-item" href="/"><span class="icon has-text-info"><i
+          class="fas fa-home"></i></span><span>Home</span></a>
+        <a class="navbar-item" href="/about.html"><span class="icon has-text-info"><i
+          class="fas fa-info-circle"></i></span><span>About</span></a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"><span class="icon has-text-info"><i
+            class="fas fa-book"></i></span><span>User guide</span></a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="/user-guide/getting-started.html">Getting started</a>
+            <a class="navbar-item" href="/user-guide/assertion-styles.html">Assertion styles</a>
+            <a class="navbar-item" href="/user-guide/common-patterns.html">Common Assertion Patterns</a>
+            <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
+            <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
+            <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="section">
+  <div class="container">
+    <div class="content is-medium"><h1>Assertion styles</h1> 
+<p>Two different styles of assertion -- chained and block -- are supported for different use-cases.<br> You can mix and match both in the same test and even nest chained assertions inside block assertions.</p> 
+<h2>Chained assertions</h2> 
+<p>Chained assertions use a fluent API similar to AssertJ.<br> They fail fast.<br> That is, the first assertion that fails breaks the chain and further assertions are not evaluated.</p> 
+<p>Each assertion in the chain returns an <code>Assertion</code> object that supports further assertions.</p> 
+<pre><code class="language-kotlin">val subject = "covfefe"
+expect(subject)
+  .isA&lt;String&gt;()
+  .hasLength(1)
+  .isUpperCase()
+</code></pre> 
+<p>Produces the output:</p> 
+<pre><code>Expect that "covfefe" (1 failure)
+    has length 1 : found 7
+</code></pre> 
+<p>Notice that the <code>isUpperCase()</code> assertion is not applied as the earlier <code>hasLength(1)</code> assertion failed.</p> 
+<h2>Block assertions</h2> 
+<p>Block assertions are declared in a lambda whose receiver is an <code>Assertion&lt;T&gt;</code> object.<br> They allow multiple assertions (or assertion chains) to be evaluated against the subject.</p> 
+<p>Block assertions do <em>not</em> fail fast.<br> That is, all assertions in the block are evaluated and the result of the "compound" assertion will include results for all the assertions made in the block.</p> 
+<pre><code class="language-kotlin">val subject = "covfefe"
+expect(subject) {
+  isA&lt;String&gt;()
+  hasLength(1)
+  isUpperCase()
+}
+</code></pre> 
+<p>Produces the output:</p> 
+<pre><code>Expect that "covfefe" (2 failures)
+    has length 1 : found 7
+    is upper case
+</code></pre> 
+<p>All assertions are applied and since two fail there are two errors logged.</p> 
+<h3>Chained assertions inside block assertions</h3> 
+<p>Chained assertions inside a block <em>will</em> still fail fast but will not prevent other assertions in the block from being evaluated.</p> 
+<pre><code class="language-kotlin">val subject = 1L
+expect(subject) {
+  lessThan(1).isA&lt;Int&gt;()
+  greaterThan(1)
+}
+</code></pre> 
+<p>Produces the output:</p> 
+<pre><code>Expect that 1
+    is less than 1 : found 1
+    is greater than 1 : found 1
+</code></pre> 
+<p>Note the <code>isA&lt;Int&gt;</code> assertion (that would have failed) was not evaluated since it was chained after <code>lessThan(1)</code> which failed.<br> The <code>greaterThan(1)</code> assertion <em>was</em> evaluated since it was not part of the same chain.</p></div>
+  <nav class="pagination is-medium" role="navigation" aria-label="pagination">
+    <a class="pagination-previous button is-large is-link is-outlined"
+       href="getting-started.html" >
+      <span class="icon">
+        <i class="fas fa-arrow-left"></i>
+      </span>
+    </a>
+    <a class="pagination-next button is-large is-link is-outlined" href="common-patterns.html"
+       >
+      <span class="icon">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  </nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="has-text-left-tablet has-text-centered-mobile">
+          <a href="https://github.com/robfletcher/strikt/" class="button is-dark">
+            <span class="icon"><i class="fab fa-lg fa-github"></i></span><span>GitHub</span>
+          </a>
+          <a href="https://kotlinlang.slack.com/messages/CAR7KJ96J" class="button is-danger">
+            <span class="icon"><i class="fab fa-lg fa-slack-hash"></i></span><span>Slack</span>
+          </a>
+          <a href="https://twitter.com/stri_kt" class="button is-info">
+            <span class="icon"><i class="fab fa-lg fa-twitter"></i></span><span>Twitter</span>
+          </a>
+        </p>
+      </div>
+      <div class="column">
+        <p class="has-text-right-tablet has-text-centered-mobile">
+          <a href="https://bulma.io/">
+            <img src="/img/made-with-bulma--semiblack.png" alt="Bulma" width="171" height="32">
+          </a>
+          <a href="https://jbake.org">
+            <img src="/img/jbake_128x128.png" alt="JBake v2.6.1" width="32" height="32">
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/init.js"></script>
+</body>
+</html>

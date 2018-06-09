@@ -1,6 +1,0 @@
-$dokka.format:html
-$dokka.linkExtension:html
-$dokka.location:strikt.assertions$article#java.lang.Class((kotlin.Any))strikt.assertions/java.lang.-class/article.html
-strikt.api
-strikt.api.reporting
-strikt.assertions
