@@ -71,32 +71,6 @@
  <br> 
  <ul> 
   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-  <a href="strikt.api.reporting/-actual/index.html"><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Actual</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></a>
-  <br> 
-  <ul> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-actual/-init-.html"><span class="identifier">Actual</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Actual$<init>(kotlin.String, strikt.api.reporting.Actual.T)/description">description</span><span class="symbol">:</span>&nbsp;</a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.reporting.Actual$<init>(kotlin.String, strikt.api.reporting.Actual.T)/value">value</span>
-   <span class="symbol">:</span>&nbsp;
-   <a href="strikt.api.reporting/-actual/index.html#T"><span class="identifier">T</span></a>
-   <span class="symbol">)</span>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-actual/description.html"><span class="keyword">val </span><span class="identifier">description</span><span class="symbol">: </span></a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-actual/to-string.html"><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span></a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-actual/value.html"><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span></a>
-   <a href="strikt.api.reporting/-actual/index.html#T"><span class="identifier">T</span></a>
-   <br> 
-  </ul> 
-  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
   <a href="strikt.api/-assertion/index.html"><span class="keyword">class </span><span class="identifier">Assertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></a>
   <br> 
   <ul> 
@@ -194,6 +168,34 @@
    <span class="symbol">)</span>
    <span class="symbol">: </span>
    <a href="strikt.api/-composed-assertion-context/index.html"><span class="identifier">ComposedAssertionContext</span></a>
+   <span class="symbol">&lt;</span>
+   <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
+   <span class="symbol">&gt;</span>
+   <br> 
+   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
+   <a href="strikt.api/-assertion/described-as.html"><span class="keyword">fun </span><span class="identifier">describedAs</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$describedAs(kotlin.String)/description">description</span><span class="symbol">:</span>&nbsp;</a>
+   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
+   <span class="symbol">)</span>
+   <span class="symbol">: </span>
+   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
+   <span class="symbol">&lt;</span>
+   <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
+   <span class="symbol">&gt;</span>
+   <br> 
+   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
+   <a href="strikt.api/-assertion/evaluate.html"><span class="keyword">fun </span><span class="identifier">evaluate</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$evaluate(kotlin.Function1((strikt.api.Assertion((strikt.api.Assertion.T)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;</a>
+   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
+   <span class="symbol">&lt;</span>
+   <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
+   <span class="symbol">&gt;</span>
+   <span class="symbol">.</span>
+   <span class="symbol">(</span>
+   <span class="symbol">)</span>&nbsp;
+   <span class="symbol">-&gt;</span>&nbsp;
+   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
+   <span class="symbol">)</span>
+   <span class="symbol">: </span>
+   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
    <span class="symbol">&lt;</span>
    <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
    <span class="symbol">&gt;</span>
@@ -439,50 +441,10 @@
    <span class="symbol">&gt;</span>
    <br> 
    <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api/-composed-assertions/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E)/description">description</span><span class="symbol">:</span>&nbsp;</a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E)/subject">subject</span>
-   <span class="symbol">:</span>&nbsp;
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">)</span>
-   <span class="symbol">: </span>
-   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-   <span class="symbol">&lt;</span>
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">&gt;</span>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
    <a href="strikt.api/-composed-assertions/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api.ComposedAssertions$expect(strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/subject">subject</span><span class="symbol">:</span>&nbsp;</a>
    <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
    <span class="symbol">, </span>
    <span class="identifier" id="strikt.api.ComposedAssertions$expect(strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/block">block</span>
-   <span class="symbol">:</span>&nbsp;
-   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-   <span class="symbol">&lt;</span>
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">&gt;</span>
-   <span class="symbol">.</span>
-   <span class="symbol">(</span>
-   <span class="symbol">)</span>&nbsp;
-   <span class="symbol">-&gt;</span>&nbsp;
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
-   <span class="symbol">)</span>
-   <span class="symbol">: </span>
-   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-   <span class="symbol">&lt;</span>
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">&gt;</span>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api/-composed-assertions/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/subject">subject</span>
-   <span class="symbol">:</span>&nbsp;
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/block">block</span>
    <span class="symbol">:</span>&nbsp;
    <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
    <span class="symbol">&lt;</span>
@@ -654,12 +616,13 @@
   <br> 
   <ul> 
    <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-subject/-init-.html"><span class="identifier">Subject</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Subject$<init>(kotlin.String, strikt.api.reporting.Subject.T)/description">description</span><span class="symbol">:</span>&nbsp;</a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.reporting.Subject$<init>(kotlin.String, strikt.api.reporting.Subject.T)/value">value</span>
-   <span class="symbol">:</span>&nbsp;
+   <a href="strikt.api.reporting/-subject/-init-.html"><span class="identifier">Subject</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Subject$<init>(strikt.api.reporting.Subject.T, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;</a>
    <a href="strikt.api.reporting/-subject/index.html#T"><span class="identifier">T</span></a>
+   <span class="symbol">, </span>
+   <span class="identifier" id="strikt.api.reporting.Subject$<init>(strikt.api.reporting.Subject.T, kotlin.String)/description">description</span>
+   <span class="symbol">:</span>&nbsp;
+   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;
+   <span class="symbol">=</span>&nbsp;"%s"
    <span class="symbol">)</span>
    <br> 
    <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
@@ -783,6 +746,34 @@
    <span class="symbol">&gt;</span>
    <br> 
    <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
+   <a href="strikt.api/-assertion/described-as.html"><span class="keyword">fun </span><span class="identifier">describedAs</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$describedAs(kotlin.String)/description">description</span><span class="symbol">:</span>&nbsp;</a>
+   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
+   <span class="symbol">)</span>
+   <span class="symbol">: </span>
+   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
+   <span class="symbol">&lt;</span>
+   <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
+   <span class="symbol">&gt;</span>
+   <br> 
+   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
+   <a href="strikt.api/-assertion/evaluate.html"><span class="keyword">fun </span><span class="identifier">evaluate</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$evaluate(kotlin.Function1((strikt.api.Assertion((strikt.api.Assertion.T)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;</a>
+   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
+   <span class="symbol">&lt;</span>
+   <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
+   <span class="symbol">&gt;</span>
+   <span class="symbol">.</span>
+   <span class="symbol">(</span>
+   <span class="symbol">)</span>&nbsp;
+   <span class="symbol">-&gt;</span>&nbsp;
+   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
+   <span class="symbol">)</span>
+   <span class="symbol">: </span>
+   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
+   <span class="symbol">&lt;</span>
+   <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
+   <span class="symbol">&gt;</span>
+   <br> 
+   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
    <a href="strikt.api/-assertion/map.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">map</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$map(kotlin.Function1((strikt.api.Assertion.T, strikt.api.Assertion.map.R)))/function">function</span><span class="symbol">:</span>&nbsp;</a>
    <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
    <span class="symbol">.</span>
@@ -1023,50 +1014,10 @@
    <span class="symbol">&gt;</span>
    <br> 
    <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api/-composed-assertions/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E)/description">description</span><span class="symbol">:</span>&nbsp;</a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E)/subject">subject</span>
-   <span class="symbol">:</span>&nbsp;
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">)</span>
-   <span class="symbol">: </span>
-   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-   <span class="symbol">&lt;</span>
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">&gt;</span>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
    <a href="strikt.api/-composed-assertions/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api.ComposedAssertions$expect(strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/subject">subject</span><span class="symbol">:</span>&nbsp;</a>
    <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
    <span class="symbol">, </span>
    <span class="identifier" id="strikt.api.ComposedAssertions$expect(strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/block">block</span>
-   <span class="symbol">:</span>&nbsp;
-   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-   <span class="symbol">&lt;</span>
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">&gt;</span>
-   <span class="symbol">.</span>
-   <span class="symbol">(</span>
-   <span class="symbol">)</span>&nbsp;
-   <span class="symbol">-&gt;</span>&nbsp;
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
-   <span class="symbol">)</span>
-   <span class="symbol">: </span>
-   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-   <span class="symbol">&lt;</span>
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">&gt;</span>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api/-composed-assertions/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">E</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/subject">subject</span>
-   <span class="symbol">:</span>&nbsp;
-   <a href="strikt.api/-composed-assertions/expect.html#E"><span class="identifier">E</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.ComposedAssertions$expect(kotlin.String, strikt.api.ComposedAssertions.expect.E, kotlin.Function1((strikt.api.Assertion((strikt.api.ComposedAssertions.expect.E)), kotlin.Unit)))/block">block</span>
    <span class="symbol">:</span>&nbsp;
    <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
    <span class="symbol">&lt;</span>
@@ -1153,50 +1104,10 @@
   <span class="symbol">&gt;</span>
   <br> 
   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-  <a href="strikt.api/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api$expect(kotlin.String, strikt.api.expect.T)/subjectDescription">subjectDescription</span><span class="symbol">:</span>&nbsp;</a>
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-  <span class="symbol">, </span>
-  <span class="identifier" id="strikt.api$expect(kotlin.String, strikt.api.expect.T)/subject">subject</span>
-  <span class="symbol">:</span>&nbsp;
-  <a href="strikt.api/expect.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">)</span>
-  <span class="symbol">: </span>
-  <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/expect.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
-  <br> 
-  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
   <a href="strikt.api/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api$expect(strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/subject">subject</span><span class="symbol">:</span>&nbsp;</a>
   <a href="strikt.api/expect.html#T"><span class="identifier">T</span></a>
   <span class="symbol">, </span>
   <span class="identifier" id="strikt.api$expect(strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/block">block</span>
-  <span class="symbol">:</span>&nbsp;
-  <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/expect.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
-  <span class="symbol">.</span>
-  <span class="symbol">(</span>
-  <span class="symbol">)</span>&nbsp;
-  <span class="symbol">-&gt;</span>&nbsp;
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
-  <span class="symbol">)</span>
-  <span class="symbol">: </span>
-  <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/expect.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
-  <br> 
-  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-  <a href="strikt.api/expect.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api$expect(kotlin.String, strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/subjectDescription">subjectDescription</span><span class="symbol">:</span>&nbsp;</a>
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-  <span class="symbol">, </span>
-  <span class="identifier" id="strikt.api$expect(kotlin.String, strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/subject">subject</span>
-  <span class="symbol">:</span>&nbsp;
-  <a href="strikt.api/expect.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">, </span>
-  <span class="identifier" id="strikt.api$expect(kotlin.String, strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/block">block</span>
   <span class="symbol">:</span>&nbsp;
   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
   <span class="symbol">&lt;</span>
@@ -1234,61 +1145,11 @@
   <a href="strikt.api/throws.html#E"><span class="identifier">E</span></a>
   <span class="symbol">&gt;</span>
   <br> 
-  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-  <a href="strikt.api/throws.html"><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="keyword">reified</span>&nbsp;<span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a>
-  <span class="symbol">&gt;</span> 
-  <span class="identifier">throws</span>
-  <span class="symbol">(</span>
-  <span class="identifier" id="strikt.api$throws(kotlin.String, kotlin.Function0((kotlin.Unit)))/description">description</span>
-  <span class="symbol">:</span>&nbsp;
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-  <span class="symbol">, </span>
-  <span class="keyword">noinline</span> 
-  <span class="identifier" id="strikt.api$throws(kotlin.String, kotlin.Function0((kotlin.Unit)))/action">action</span>
-  <span class="symbol">:</span>&nbsp;
-  <span class="symbol">(</span>
-  <span class="symbol">)</span>&nbsp;
-  <span class="symbol">-&gt;</span>&nbsp;
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
-  <span class="symbol">)</span>
-  <span class="symbol">: </span>
-  <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/throws.html#E"><span class="identifier">E</span></a>
-  <span class="symbol">&gt;</span>
-  <br> 
  </ul> 
  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
  <a href="strikt.api.reporting/index.html"><span class="keyword">package</span> <span class="identifier">strikt.api.reporting</span></a>
  <br> 
  <ul> 
-  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-  <a href="strikt.api.reporting/-actual/index.html"><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Actual</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></a>
-  <br> 
-  <ul> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-actual/-init-.html"><span class="identifier">Actual</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Actual$<init>(kotlin.String, strikt.api.reporting.Actual.T)/description">description</span><span class="symbol">:</span>&nbsp;</a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.reporting.Actual$<init>(kotlin.String, strikt.api.reporting.Actual.T)/value">value</span>
-   <span class="symbol">:</span>&nbsp;
-   <a href="strikt.api.reporting/-actual/index.html#T"><span class="identifier">T</span></a>
-   <span class="symbol">)</span>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-actual/description.html"><span class="keyword">val </span><span class="identifier">description</span><span class="symbol">: </span></a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-actual/to-string.html"><span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span></a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <br> 
-   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-actual/value.html"><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span></a>
-   <a href="strikt.api.reporting/-actual/index.html#T"><span class="identifier">T</span></a>
-   <br> 
-  </ul> 
   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
   <a href="strikt.api.reporting/-reportable/index.html"><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Reportable</span></a>
   <br> 
@@ -1385,12 +1246,13 @@
   <br> 
   <ul> 
    <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-   <a href="strikt.api.reporting/-subject/-init-.html"><span class="identifier">Subject</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Subject$<init>(kotlin.String, strikt.api.reporting.Subject.T)/description">description</span><span class="symbol">:</span>&nbsp;</a>
-   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
-   <span class="symbol">, </span>
-   <span class="identifier" id="strikt.api.reporting.Subject$<init>(kotlin.String, strikt.api.reporting.Subject.T)/value">value</span>
-   <span class="symbol">:</span>&nbsp;
+   <a href="strikt.api.reporting/-subject/-init-.html"><span class="identifier">Subject</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Subject$<init>(strikt.api.reporting.Subject.T, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;</a>
    <a href="strikt.api.reporting/-subject/index.html#T"><span class="identifier">T</span></a>
+   <span class="symbol">, </span>
+   <span class="identifier" id="strikt.api.reporting.Subject$<init>(strikt.api.reporting.Subject.T, kotlin.String)/description">description</span>
+   <span class="symbol">:</span>&nbsp;
+   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;
+   <span class="symbol">=</span>&nbsp;"%s"
    <span class="symbol">)</span>
    <br> 
    <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
@@ -1406,14 +1268,6 @@
    <a href="strikt.api.reporting/-subject/index.html#T"><span class="identifier">T</span></a>
    <br> 
   </ul> 
-  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-  <a href="strikt.api.reporting/format-value.html"><span class="keyword">fun </span><span class="identifier">formatValue</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting$formatValue(kotlin.Any)/value">value</span><span class="symbol">:</span>&nbsp;</a>
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>
-  <span class="symbol">?</span>
-  <span class="symbol">)</span>
-  <span class="symbol">: </span>
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>
-  <br> 
  </ul> 
  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
  <a href="strikt.assertions/index.html"><span class="keyword">package</span> <span class="identifier">strikt.assertions</span></a>
@@ -1789,27 +1643,67 @@
   <span class="symbol">&gt;</span>
   <br> 
   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
-  <a href="strikt.assertions/has-entry.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">K</span><span class="symbol">, </span><span class="identifier">V</span><span class="symbol">&gt;</span> </a>
-  <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/has-entry.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a>
   <span class="symbol">&lt;</span>
   <a href="strikt.assertions/has-entry.html#K"><span class="identifier">K</span></a>
   <span class="symbol">,</span>&nbsp;
   <a href="strikt.assertions/has-entry.html#V"><span class="identifier">V</span></a>
   <span class="symbol">&gt;</span>
+  <span class="symbol">, </span>
+  <span class="identifier">K</span>
+  <span class="symbol">, </span>
+  <span class="identifier">V</span>
+  <span class="symbol">&gt;</span> 
+  <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/has-entry.html#T"><span class="identifier">T</span></a>
   <span class="symbol">&gt;</span>
   <span class="symbol">.</span>
   <span class="identifier">hasEntry</span>
   <span class="symbol">(</span>
-  <span class="identifier" id="strikt.assertions$hasEntry(strikt.api.Assertion((kotlin.collections.Map((strikt.assertions.hasEntry.K, strikt.assertions.hasEntry.V)))), strikt.assertions.hasEntry.K)/key">key</span>
+  <span class="identifier" id="strikt.assertions$hasEntry(strikt.api.Assertion((strikt.assertions.hasEntry.T)), strikt.assertions.hasEntry.K)/key">key</span>
   <span class="symbol">:</span>&nbsp;
   <a href="strikt.assertions/has-entry.html#K"><span class="identifier">K</span></a>
   <span class="symbol">)</span>
   <span class="symbol">: </span>
   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
   <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/has-entry.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <br> 
+  <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>
+  <a href="strikt.assertions/has-entry.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/has-entry.html#K"><span class="identifier">K</span></a>
+  <span class="symbol">,</span>&nbsp;
   <a href="strikt.assertions/has-entry.html#V"><span class="identifier">V</span></a>
+  <span class="symbol">&gt;</span>
+  <span class="symbol">, </span>
+  <span class="identifier">K</span>
+  <span class="symbol">, </span>
+  <span class="identifier">V</span>
+  <span class="symbol">&gt;</span> 
+  <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/has-entry.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <span class="symbol">.</span>
+  <span class="identifier">hasEntry</span>
+  <span class="symbol">(</span>
+  <span class="identifier" id="strikt.assertions$hasEntry(strikt.api.Assertion((strikt.assertions.hasEntry.T)), strikt.assertions.hasEntry.K, strikt.assertions.hasEntry.V)/key">key</span>
+  <span class="symbol">:</span>&nbsp;
+  <a href="strikt.assertions/has-entry.html#K"><span class="identifier">K</span></a>
+  <span class="symbol">, </span>
+  <span class="identifier" id="strikt.assertions$hasEntry(strikt.api.Assertion((strikt.assertions.hasEntry.T)), strikt.assertions.hasEntry.K, strikt.assertions.hasEntry.V)/value">value</span>
+  <span class="symbol">:</span>&nbsp;
+  <a href="strikt.assertions/has-entry.html#V"><span class="identifier">V</span></a>
+  <span class="symbol">)</span>
+  <span class="symbol">: </span>
+  <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/has-entry.html#T"><span class="identifier">T</span></a>
   <span class="symbol">&gt;</span>
   <br> 
   <a href="/Users/rfletcher/Development/strikt/site/build/dokka/strikt-core/index"></a>

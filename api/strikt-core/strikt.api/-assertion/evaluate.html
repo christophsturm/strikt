@@ -62,16 +62,21 @@
 </nav>
 <main class="section">
   <div class="container">
-    <div class="content is-medium"><a href="../index.html">strikt-core</a>&nbsp;/&nbsp;
-<a href="index.html">strikt.assertions</a>&nbsp;/&nbsp;
-<a href="./throws.html">throws</a>
+    <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
+<a href="../index.html">strikt.api</a>&nbsp;/&nbsp;
+<a href="index.html">Assertion</a>&nbsp;/&nbsp;
+<a href="./evaluate.html">evaluate</a>
 <br> 
 <br> 
-<h1>throws</h1> 
-<a name="strikt.assertions$throws(strikt.api.Assertion((kotlin.Function0((kotlin.Unit)))))"></a> 
-<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="keyword">reified</span>&nbsp;<span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">&gt;</span> <a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">throws</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="throws.html#E"><span class="identifier">E</span></a><span class="symbol">&gt;</span></code> 
-<p>Asserts that the subject function throws an exception of type <a href="throws.html#E">E</a> when executed.</p> 
-<p><strong>Return</strong><br> an assertion over the thrown exception, allowing further assertions about messages, root causes, etc.</p></div>
+<h1>evaluate</h1> 
+<a name="strikt.api.Assertion$evaluate(kotlin.Function1((strikt.api.Assertion((strikt.api.Assertion.T)), kotlin.Unit)))"></a> 
+<code><span class="keyword">fun </span><span class="identifier">evaluate</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$evaluate(kotlin.Function1((strikt.api.Assertion((strikt.api.Assertion.T)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> 
+<p>Evaluates multiple assertions against the subject.</p> 
+<h3>Parameters</h3> 
+<p><a name="block"></a> <code>block</code> - a closure that can perform multiple assertions that will all be evaluated regardless of whether preceding ones pass or fail.</p> 
+<p><strong>See Also</strong><br> </p>
+<p><a href="../expect.html">expect</a></p> 
+<p></p></div>
   </div>
 </main>
 <footer class="footer">

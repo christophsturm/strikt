@@ -72,7 +72,7 @@
 <a name="strikt.api.Assertion$assert(kotlin.String, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))"></a> 
 <code><span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$assert(kotlin.String, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="strikt.api.Assertion$assert(kotlin.String, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))/assertion">assertion</span><span class="symbol">:</span>&nbsp;<a href="../-assertion-context/index.html"><span class="identifier">AssertionContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> 
 <p>Evaluates a condition that may pass or fail.</p> 
-<p>This method can be used directly in a test but is typically used inside an extension method on <code>Assertion&lt;T&gt;</code> such as those provided in the <a href="../../strikt.assertions/index.html">strikt.assertions</a> package.</p> 
+<p>While this method <em>can</em> be used directly in a test but is typically used inside an extension method on <code>Assertion&lt;T&gt;</code> such as those provided in the <a href="../../strikt.assertions/index.html">strikt.assertions</a> package.</p> 
 <pre><code class="lang-kotlin">val subject = Person(
   name = "David",
   birthDate = LocalDate.of(1947, 1, 8)
@@ -109,7 +109,45 @@ expect(subject).isOlderThan(21)</code></pre>
 <p><a href="../-assertion-context/fail.html">AssertionContext.fail</a></p> 
 <p></p> 
 <a name="strikt.api.Assertion$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))"></a> 
-<code><span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="strikt.api.Assertion$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))/expected">expected</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="strikt.api.Assertion$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))/assertion">assertion</span><span class="symbol">:</span>&nbsp;<a href="../-assertion-context/index.html"><span class="identifier">AssertionContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></div>
+<code><span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="strikt.api.Assertion$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))/expected">expected</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="strikt.api.Assertion$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionContext((strikt.api.Assertion.T)), kotlin.Unit)))/assertion">assertion</span><span class="symbol">:</span>&nbsp;<a href="../-assertion-context/index.html"><span class="identifier">AssertionContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> 
+<p>Evaluates a condition that may pass or fail.</p> 
+<p>While this method <em>can</em> be used directly in a test but is typically used inside an extension method on <code>Assertion&lt;T&gt;</code> such as those provided in the <a href="../../strikt.assertions/index.html">strikt.assertions</a> package.</p> 
+<pre><code class="lang-kotlin">val subject = Person(
+  name = "David",
+  birthDate = LocalDate.of(1947, 1, 8)
+)
+
+// use assert in a test for a one-off assertion
+expect(subject)
+  .assert("is older than %d", 21) {
+    if (subject.birthDate &lt; LocalDate.now().minus(21, YEARS)) {
+      pass()
+    } else {
+      fail()
+    }
+  }
+
+// alternatively define a reusable assertion function
+fun Assertion&lt;Person&gt;.isOlderThan(age: Int) =
+  assert("is older than %d", age) {
+    if (subject.birthDate &lt; LocalDate.now().minus(age.toLong(), YEARS)) {
+      pass()
+    } else {
+      fail()
+    }
+  }
+
+// which can then be used just like standard assertions
+expect(subject).isOlderThan(21)</code></pre> 
+<h3>Parameters</h3> 
+<p><a name="description"></a> <code>description</code> - a description for the condition the assertion evaluates.</p> 
+<p><a name="expected"></a> <code>expected</code> - the expected value of a comparison.</p> 
+<p><a name="assertion"></a> <code>assertion</code> - the assertion implementation that should result in a call to <a href="../-assertion-context/pass.html">AssertionContext.pass</a> or <a href="../-assertion-context/fail.html">AssertionContext.fail</a>.</p> 
+<p><strong>Return</strong><br> this assertion, in order to facilitate a fluent API.</p> 
+<p><strong>See Also</strong><br> </p>
+<p><a href="../-assertion-context/pass.html">AssertionContext.pass</a></p> 
+<p><a href="../-assertion-context/fail.html">AssertionContext.fail</a></p> 
+<p></p></div>
   </div>
 </main>
 <footer class="footer">

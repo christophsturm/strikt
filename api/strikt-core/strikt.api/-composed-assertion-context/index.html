@@ -71,26 +71,26 @@
 <code><span class="keyword">interface </span><span class="identifier">ComposedAssertionContext</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code> 
 <p>Allows the containing assertion to make decisions about whether it has passed or failed based on the results of composed assertions.</p> 
 <p><strong>See Also</strong><br> </p>
-<p><a href="#">AssertionContext.compose</a></p> 
+<p><a href="../-assertion/compose.html">Assertion.compose</a></p> 
 <p></p> 
 <h3>Properties</h3> 
 <table> 
  <tbody> 
   <tr> 
    <td> <p><a href="all-failed.html">allFailed</a></p> </td> 
-   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">allFailed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td> 
+   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">allFailed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code> <p><code>true</code> if all composed assertions failed, otherwise <code>false</code>.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="all-passed.html">allPassed</a></p> </td> 
-   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">allPassed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td> 
+   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">allPassed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code> <p><code>true</code> if all composed assertions passed, otherwise <code>false</code>.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="any-failed.html">anyFailed</a></p> </td> 
-   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">anyFailed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td> 
+   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">anyFailed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code> <p><code>true</code> if at least one composed assertion failed, otherwise <code>false</code>.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="any-passed.html">anyPassed</a></p> </td> 
-   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">anyPassed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td> 
+   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">anyPassed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code> <p><code>true</code> if at least one composed assertion passed, otherwise <code>false</code>.</p> </td> 
   </tr> 
  </tbody> 
 </table> 
@@ -99,15 +99,15 @@
  <tbody> 
   <tr> 
    <td> <p><a href="fail.html">fail</a></p> </td> 
-   <td> <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">fail</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td> 
+   <td> <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">fail</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Report that the composed assertion failed.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="pass.html">pass</a></p> </td> 
-   <td> <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pass</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td> 
+   <td> <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pass</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Report that the composed assertion succeeded.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="then.html">then</a></p> </td> 
-   <td> <code><span class="keyword">abstract</span> <span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">then</span><span class="symbol">(</span><span class="identifier" id="strikt.api.ComposedAssertionContext$then(kotlin.Function1((strikt.api.ComposedAssertionContext((strikt.api.ComposedAssertionContext.T)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ComposedAssertionContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <p>A convenient way to handle to composed assertion results. Chain a call to this method after <a href="#">AssertionContext.compose</a> in order to handle the composed assertion results.</p> </td> 
+   <td> <code><span class="keyword">abstract</span> <span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">then</span><span class="symbol">(</span><span class="identifier" id="strikt.api.ComposedAssertionContext$then(kotlin.Function1((strikt.api.ComposedAssertionContext((strikt.api.ComposedAssertionContext.T)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">ComposedAssertionContext</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <p>A convenient way to handle to composed assertion results. Chain a call to this method after <a href="../-assertion/compose.html">Assertion.compose</a> in order to handle the composed assertion results.</p> </td> 
   </tr> 
  </tbody> 
 </table></div>
