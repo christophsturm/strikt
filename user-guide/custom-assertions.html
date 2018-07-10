@@ -63,7 +63,7 @@
 <main class="section">
   <div class="container">
     <div class="content is-medium"><h1>Custom Assertions</h1> 
-<p>One of the aims of Strikt is that implementing your own assertions is <em>really, really</em> easy.<br> Assertion functions are <a href="https://kotlinlang.org/docs/reference/extensions.html">https://kotlinlang.org/docs/reference/extensions.html</a>[extension functions] on the interface <code>Assertion&lt;T&gt;</code>.</p> 
+<p>One of the aims of Strikt is that implementing your own assertions is <em>really, really</em> easy.<br> Assertion functions are <a href="https://kotlinlang.org/docs/reference/extensions.html">extension functions</a> on the interface <code>Assertion&lt;T&gt;</code>.</p> 
 <h2>Atomic assertions</h2> 
 <p>"Atomic" assertions produce a single message on failure.<br> They call <code>assert</code> passing a lambda with the assertion logic that calls <code>pass()</code> or <code>fail()</code>.</p> 
 <p>The standard assertions <code>isNull</code>, <code>isEqualTo</code>, <code>isA&lt;T&gt;</code> and many others are simple assertions implemented just like this.</p> 

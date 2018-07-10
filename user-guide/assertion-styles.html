@@ -67,21 +67,21 @@
 <h2>Chained assertions</h2> 
 <p>Chained assertions use a fluent API similar to AssertJ.<br> They fail fast.<br> That is, the first assertion that fails breaks the chain and further assertions are not evaluated.</p> 
 <p>Each assertion in the chain returns an <code>Assertion</code> object that supports further assertions.</p> 
-<pre><code class="language-kotlin">val subject = "covfefe"
+<pre><code class="language-kotlin">val subject = "fnord"
 expect(subject)
   .isA&lt;String&gt;()
   .hasLength(1)
   .isUpperCase()
 </code></pre> 
 <p>Produces the output:</p> 
-<pre><code>Expect that "covfefe" (1 failure)
-    has length 1 : found 7
+<pre><code>Expect that "fnord" (1 failure)
+    has length 1 : found 5
 </code></pre> 
 <p>Notice that the <code>isUpperCase()</code> assertion is not applied as the earlier <code>hasLength(1)</code> assertion failed.</p> 
 <h2>Block assertions</h2> 
 <p>Block assertions are declared in a lambda whose receiver is an <code>Assertion&lt;T&gt;</code> object.<br> They allow multiple assertions (or assertion chains) to be evaluated against the subject.</p> 
 <p>Block assertions do <em>not</em> fail fast.<br> That is, all assertions in the block are evaluated and the result of the "compound" assertion will include results for all the assertions made in the block.</p> 
-<pre><code class="language-kotlin">val subject = "covfefe"
+<pre><code class="language-kotlin">val subject = "fnord"
 expect(subject) {
   isA&lt;String&gt;()
   hasLength(1)
@@ -89,8 +89,8 @@ expect(subject) {
 }
 </code></pre> 
 <p>Produces the output:</p> 
-<pre><code>Expect that "covfefe" (2 failures)
-    has length 1 : found 7
+<pre><code>Expect that "fnord" (2 failures)
+    has length 1 : found 5
     is upper case
 </code></pre> 
 <p>All assertions are applied and since two fail there are two errors logged.</p> 

@@ -65,7 +65,7 @@
     <div class="content is-medium"><h1>Mapping Over Assertion Subjects</h1> 
 <p>Although you can obviously write assertions for the properties of an object with code like this:</p> 
 <pre><code class="language-kotlin">expect(map.size).isEqualTo(1)
-expect(list.first()).isEqualTo("covfefe")
+expect(list.first()).isEqualTo("fnord")
 expect(person.name).isEqualTo("Ziggy")
 </code></pre> 
 <p>Sometimes it's useful to be able to transform an assertion on a subject to an assertion on a property of that subject, or the result of a method call.<br> Strikt allows for this using the <code>Assertion&lt;T&gt;.map</code> method.</p> 
