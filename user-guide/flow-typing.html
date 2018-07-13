@@ -62,7 +62,9 @@
 </nav>
 <main class="section">
   <div class="container">
-    <div class="content is-medium"><h1>Strongly Typed Assertions</h1> 
+    <div class="columns is-centered">
+      <div class="column is-10-desktop">
+        <div class="content is-medium"><h1>Strongly Typed Assertions</h1> 
 <p>Strikt's API is designed to work with Kotlin's strong type system.</p> 
 <p>Strikt's assertion API uses the class <code>Assertion&lt;T&gt;</code>, with the generic type <code>T</code> representing the (declared) type of the assertion subject.<br> Assertion functions such as <code>isEqualTo</code> are implemented as extension functions on <code>Assertion</code> with an appropriate generic type.</p> 
 <p>For example <code>isEqualTo</code> is an extension function on <code>Assertion&lt;Any?&gt;</code> as it's useful for many types of subject whereas <code>isEqualToIgnoringCase</code> is an extension function on <code>Assertion&lt;CharSequence&gt;</code> since it only makes sense to use it on string-like things.</p> 
@@ -107,6 +109,8 @@ expect(subject.get("name"))
       </span>
     </a>
   </nav>
+      </div>
+    </div>
   </div>
 </main>
 <footer class="footer">

@@ -62,7 +62,9 @@
 </nav>
 <main class="section">
   <div class="container">
-    <div class="content is-medium"><h1>Custom Assertions</h1> 
+    <div class="columns is-centered">
+      <div class="column is-10-desktop">
+        <div class="content is-medium"><h1>Custom Assertions</h1> 
 <p>One of the aims of Strikt is that implementing your own assertions is <em>really, really</em> easy.<br> Assertion functions are <a href="https://kotlinlang.org/docs/reference/extensions.html">extension functions</a> on the interface <code>Assertion&lt;T&gt;</code>.</p> 
 <h2>Atomic assertions</h2> 
 <p>"Atomic" assertions produce a single message on failure.<br> They call <code>assert</code> passing a lambda with the assertion logic that calls <code>pass()</code> or <code>fail()</code>.</p> 
@@ -162,6 +164,8 @@
       </span>
     </a>
   </nav>
+      </div>
+    </div>
   </div>
 </main>
 <footer class="footer">
