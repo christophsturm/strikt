@@ -70,29 +70,20 @@
 <br> 
 <br> 
 <h2>Package strikt.protobuf</h2> 
-<h3>Type Aliases</h3> 
-<table> 
- <tbody> 
-  <tr> 
-   <td> <p><a href="-any-message.html">AnyMessage</a></p> </td> 
-   <td> <code><span class="keyword">typealias </span><span class="identifier">AnyMessage</span>&nbsp;<span class="symbol">=</span>&nbsp;<span class="identifier">Any</span></code></td> 
-  </tr> 
- </tbody> 
-</table> 
 <h3>Functions</h3> 
 <table> 
  <tbody> 
   <tr> 
    <td> <p><a href="is-empty.html">isEmpty</a></p> </td> 
-   <td> <code><span class="keyword">fun </span><a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="-any-message.html"><span class="identifier">AnyMessage</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td> 
+   <td> <code><span class="keyword">fun </span><a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Asserts that a <code>com.google.protobuf.Any</code> is empty and does not contain an object of any kind.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="unpack.html">unpack</a></p> </td> 
-   <td> <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Message</span><span class="symbol">&gt;</span> <a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="-any-message.html"><span class="identifier">AnyMessage</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">unpack</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="unpack.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td> 
+   <td> <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Message</span><span class="symbol">&gt;</span> <a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">unpack</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="unpack.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <p>Maps an assertion on <code>com.google.protobuf.Any</code> to an assertion on an unpacked message of type <a href="unpack.html#T">T</a>.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="unpacks-to.html">unpacksTo</a></p> </td> 
-   <td> <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Message</span><span class="symbol">&gt;</span> <a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="-any-message.html"><span class="identifier">AnyMessage</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">unpacksTo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="-any-message.html"><span class="identifier">AnyMessage</span></a><span class="symbol">&gt;</span></code></td> 
+   <td> <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Message</span><span class="symbol">&gt;</span> <a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">unpacksTo</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><span class="identifier">Any</span><span class="symbol">&gt;</span></code> <p>Asserts that the subject is a message of type <a href="unpacks-to.html#T">T</a>.</p> </td> 
   </tr> 
  </tbody> 
 </table></div>
