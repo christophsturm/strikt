@@ -64,75 +64,53 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
+        <div class="content is-medium"><a href="../../index.html">strikt</a>&nbsp;/&nbsp;
 <a href="../index.html">strikt.api.reporting</a>&nbsp;/&nbsp;
-<a href="./index.html">Subject</a>
+<a href="./index.html">Reportable</a>
 <br> 
 <br> 
-<h1>Subject</h1> 
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Subject</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-reportable/index.html"><span class="identifier">Reportable</span></a></code> 
-<p>THe subject of an assertion.</p> 
-<h3>Constructors</h3> 
-<table> 
- <tbody> 
-  <tr> 
-   <td> <p><a href="-init-.html">&lt;init&gt;</a></p> </td> 
-   <td> <code><span class="identifier">Subject</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Subject$<init>(strikt.api.reporting.Subject.T, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier" id="strikt.api.reporting.Subject$<init>(strikt.api.reporting.Subject.T, kotlin.String)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"%s"<span class="symbol">)</span></code> <p>THe subject of an assertion.</p> </td> 
-  </tr> 
- </tbody> 
-</table> 
+<h1>Reportable</h1> 
+<code><span class="keyword">sealed</span> <span class="keyword">class </span><span class="identifier">Reportable</span></code> 
+<p>Part of a graph of assertion results.</p> 
 <h3>Properties</h3> 
 <table> 
  <tbody> 
   <tr> 
-   <td> <p><a href="description.html">description</a></p> </td> 
-   <td> <code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code> <p>The formattable description of the subject.</p> </td> 
-  </tr> 
-  <tr> 
-   <td> <p><a href="status.html">status</a></p> </td> 
-   <td> <code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../strikt.api/-status/index.html"><span class="identifier">Status</span></a></code> <p>The status of the assertion or group of assertions.</p> </td> 
-  </tr> 
-  <tr> 
-   <td> <p><a href="value.html">value</a></p> </td> 
-   <td> <code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="index.html#T"><span class="identifier">T</span></a></code> <p>The subject value.</p> </td> 
-  </tr> 
- </tbody> 
-</table> 
-<h3>Inherited Properties</h3> 
-<table> 
- <tbody> 
-  <tr> 
-   <td> <p><a href="../-reportable/all-failed.html">allFailed</a></p> </td> 
+   <td> <p><a href="all-failed.html">allFailed</a></p> </td> 
    <td> <code><span class="keyword">val </span><span class="identifier">allFailed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code> <p><code>true</code> if all composed assertions failed, otherwise <code>false</code>.</p> </td> 
   </tr> 
   <tr> 
-   <td> <p><a href="../-reportable/all-passed.html">allPassed</a></p> </td> 
+   <td> <p><a href="all-passed.html">allPassed</a></p> </td> 
    <td> <code><span class="keyword">val </span><span class="identifier">allPassed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code> <p><code>true</code> if all composed assertions passed, otherwise <code>false</code>.</p> </td> 
   </tr> 
   <tr> 
-   <td> <p><a href="../-reportable/any-failed.html">anyFailed</a></p> </td> 
+   <td> <p><a href="any-failed.html">anyFailed</a></p> </td> 
    <td> <code><span class="keyword">val </span><span class="identifier">anyFailed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code> <p><code>true</code> if at least one composed assertion failed, otherwise <code>false</code>.</p> </td> 
   </tr> 
   <tr> 
-   <td> <p><a href="../-reportable/any-passed.html">anyPassed</a></p> </td> 
+   <td> <p><a href="any-passed.html">anyPassed</a></p> </td> 
    <td> <code><span class="keyword">val </span><span class="identifier">anyPassed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code> <p><code>true</code> if at least one composed assertion passed, otherwise <code>false</code>.</p> </td> 
   </tr> 
   <tr> 
-   <td> <p><a href="../-reportable/results.html">results</a></p> </td> 
-   <td> <code><span class="keyword">val </span><span class="identifier">results</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="../-reportable/index.html"><span class="identifier">Reportable</span></a><span class="symbol">&gt;</span></code> <p>The results of any assertions in this node of the graph.</p> </td> 
+   <td> <p><a href="results.html">results</a></p> </td> 
+   <td> <code><span class="keyword">val </span><span class="identifier">results</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span class="identifier">Collection</span></a><span class="symbol">&lt;</span><a href="./index.html"><span class="identifier">Reportable</span></a><span class="symbol">&gt;</span></code> <p>The results of any assertions in this node of the graph.</p> </td> 
   </tr> 
   <tr> 
-   <td> <p><a href="../-reportable/root.html">root</a></p> </td> 
-   <td> <code><span class="keyword">val </span><span class="identifier">root</span><span class="symbol">: </span><a href="../-reportable/index.html"><span class="identifier">Reportable</span></a></code> <p>The root of the assertion graph.</p> </td> 
+   <td> <p><a href="root.html">root</a></p> </td> 
+   <td> <code><span class="keyword">val </span><span class="identifier">root</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Reportable</span></a></code> <p>The root of the assertion graph.</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p><a href="status.html">status</a></p> </td> 
+   <td> <code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../strikt.api/-status/index.html"><span class="identifier">Status</span></a></code> <p>The status of the assertion or group of assertions.</p> </td> 
   </tr> 
  </tbody> 
 </table> 
-<h3>Inherited Functions</h3> 
+<h3>Functions</h3> 
 <table> 
  <tbody> 
   <tr> 
-   <td> <p><a href="../-reportable/append.html">append</a></p> </td> 
-   <td> <code><span class="keyword">fun </span><span class="identifier">append</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Reportable$append(strikt.api.reporting.Reportable)/result">result</span><span class="symbol">:</span>&nbsp;<a href="../-reportable/index.html"><span class="identifier">Reportable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Append a new result to this node in the graph.</p> </td> 
+   <td> <p><a href="append.html">append</a></p> </td> 
+   <td> <code><span class="keyword">fun </span><span class="identifier">append</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Reportable$append(strikt.api.reporting.Reportable)/result">result</span><span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Reportable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Append a new result to this node in the graph.</p> </td> 
   </tr> 
  </tbody> 
 </table> 
@@ -141,11 +119,24 @@
  <tbody> 
   <tr> 
    <td> <p><a href="../../strikt.opentest4j/throw-on-failure.html">throwOnFailure</a></p> </td> 
-   <td> <code><span class="keyword">fun </span><a href="../-reportable/index.html"><span class="identifier">Reportable</span></a><span class="symbol">.</span><span class="identifier">throwOnFailure</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Throws an exception if the overall assertion is has failed.</p> </td> 
+   <td> <code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Reportable</span></a><span class="symbol">.</span><span class="identifier">throwOnFailure</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Throws an exception if the overall assertion is has failed.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="../../strikt.opentest4j/to-error.html">toError</a></p> </td> 
-   <td> <code><span class="keyword">fun </span><a href="../-reportable/index.html"><span class="identifier">Reportable</span></a><span class="symbol">.</span><span class="identifier">toError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span></code> <p>Converts Strikt's model of an assertion result graph into an opentest4j exception.</p> </td> 
+   <td> <code><span class="keyword">fun </span><a href="./index.html"><span class="identifier">Reportable</span></a><span class="symbol">.</span><span class="identifier">toError</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span></code> <p>Converts Strikt's model of an assertion result graph into an opentest4j exception.</p> </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h3>Inheritors</h3> 
+<table> 
+ <tbody> 
+  <tr> 
+   <td> <p><a href="../-result/index.html">Result</a></p> </td> 
+   <td> <code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Result</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Reportable</span></a></code> <p>Represents the result of an assertion or a group of assertions.</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p><a href="../-subject/index.html">Subject</a></p> </td> 
+   <td> <code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Subject</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">Reportable</span></a></code> <p>THe subject of an assertion.</p> </td> 
   </tr> 
  </tbody> 
 </table></div>

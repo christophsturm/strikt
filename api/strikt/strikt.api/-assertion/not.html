@@ -64,18 +64,22 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
-<a href="../index.html">strikt.api.reporting</a>&nbsp;/&nbsp;
-<a href="index.html">Subject</a>&nbsp;/&nbsp;
-<a href="./description.html">description</a>
+        <div class="content is-medium"><a href="../../index.html">strikt</a>&nbsp;/&nbsp;
+<a href="../index.html">strikt.api</a>&nbsp;/&nbsp;
+<a href="index.html">Assertion</a>&nbsp;/&nbsp;
+<a href="./not.html">not</a>
 <br> 
 <br> 
-<h1>description</h1> 
-<a name="strikt.api.reporting.Subject$description"></a> 
-<code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code> 
-<p>The formattable description of the subject.</p> 
-<h3>Property</h3> 
-<p><a name="description"></a> <code>description</code> - The formattable description of the subject.</p></div>
+<h1>not</h1> 
+<a name="strikt.api.Assertion$not()"></a> 
+<code><span class="keyword">fun </span><span class="identifier">not</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> 
+<p>Reverses any assertions chained after this method.</p> 
+<pre><code class="lang-kotlin">val subject: String? = "fnord"
+expect(subject)
+  .not()
+  .isNull()
+  .isUpperCase()</code></pre> 
+<p><strong>Return</strong><br> an assertion that negates the results of any assertions applied to its subject.</p></div>
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-<title> Strikt</title>
+<title>Additional Modules</title>
 
 <!-- CSS  -->
 <link href="/css/bulma.min.css" type="text/css"
@@ -53,6 +53,7 @@
             <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
             <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
             <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+            <a class="navbar-item" href="/user-guide/additional-modules.html">Additional modules</a>
           </div>
         </div>
         <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
@@ -64,18 +65,26 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
-<a href="../index.html">strikt.api.reporting</a>&nbsp;/&nbsp;
-<a href="index.html">Subject</a>&nbsp;/&nbsp;
-<a href="./description.html">description</a>
-<br> 
-<br> 
-<h1>description</h1> 
-<a name="strikt.api.reporting.Subject$description"></a> 
-<code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code> 
-<p>The formattable description of the subject.</p> 
-<h3>Property</h3> 
-<p><a name="description"></a> <code>description</code> - The formattable description of the subject.</p></div>
+        <div class="content is-medium"><h1>Additional Modules</h1> 
+<p>In addition to the core functionality provided by the <code>strikt-core</code> module, Strikt has the following optional modules:</p> 
+<h2>Protobuf</h2> 
+<p>Extensions for testing code that uses Protobuf / gRPC. See the <a href="/api/strikt/strikt.protobuf/">API docs</a>.</p> 
+<p>Add the following to your dependencies:</p> 
+<pre><code class="language-groovy">testCompile "io.strikt:strikt-protobuf:+"
+</code></pre></div>
+  <nav class="pagination is-medium" role="navigation" aria-label="pagination">
+    <a class="pagination-previous button is-large is-link is-outlined"
+       href="custom-assertions.html" >
+      <span class="icon">
+        <i class="fas fa-arrow-left"></i>
+      </span>
+    </a>
+    <a class="pagination-next button is-large is-link is-outlined" disabled>
+      <span class="icon">
+        <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  </nav>
       </div>
     </div>
   </div>

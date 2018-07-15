@@ -64,37 +64,40 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
+        <div class="content is-medium"><a href="../../index.html">strikt</a>&nbsp;/&nbsp;
 <a href="../index.html">strikt.api.reporting</a>&nbsp;/&nbsp;
-<a href="./index.html">Subject</a>
+<a href="./index.html">Result</a>
 <br> 
 <br> 
-<h1>Subject</h1> 
-<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Subject</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-reportable/index.html"><span class="identifier">Reportable</span></a></code> 
-<p>THe subject of an assertion.</p> 
-<h3>Constructors</h3> 
-<table> 
- <tbody> 
-  <tr> 
-   <td> <p><a href="-init-.html">&lt;init&gt;</a></p> </td> 
-   <td> <code><span class="identifier">Subject</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Subject$<init>(strikt.api.reporting.Subject.T, kotlin.String)/value">value</span><span class="symbol">:</span>&nbsp;<a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier" id="strikt.api.reporting.Subject$<init>(strikt.api.reporting.Subject.T, kotlin.String)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>&nbsp;<span class="symbol">=</span>&nbsp;"%s"<span class="symbol">)</span></code> <p>THe subject of an assertion.</p> </td> 
-  </tr> 
- </tbody> 
-</table> 
+<h1>Result</h1> 
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Result</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-reportable/index.html"><span class="identifier">Reportable</span></a></code> 
+<p>Represents the result of an assertion or a group of assertions.</p> 
 <h3>Properties</h3> 
 <table> 
  <tbody> 
   <tr> 
+   <td> <p><a href="actual.html">actual</a></p> </td> 
+   <td> <code><span class="keyword">val </span><span class="identifier">actual</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code> <p>The actual value or values that violated the assertion. This property is optional as it does not make sense for all types of assertion. However, it can help improve diagnostic messages where it <em>is</em> appropriate.</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p><a href="cause.html">cause</a></p> </td> 
+   <td> <code><span class="keyword">val </span><span class="identifier">cause</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span></code> <p>The exception that caused the failure, if any.</p> </td> 
+  </tr> 
+  <tr> 
    <td> <p><a href="description.html">description</a></p> </td> 
-   <td> <code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code> <p>The formattable description of the subject.</p> </td> 
+   <td> <code><span class="keyword">val </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code> <p>The description of the assertion as passed to <a href="../../strikt.api/-assertion/assert.html">strikt.api.Assertion.assert</a>.</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p><a href="expected.html">expected</a></p> </td> 
+   <td> <code><span class="keyword">val </span><span class="identifier">expected</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span></code> <p>The actual value, if relevant to the assertion.</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p><a href="message.html">message</a></p> </td> 
+   <td> <code><span class="keyword">val </span><span class="identifier">message</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code> <p>A description of the failure.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="status.html">status</a></p> </td> 
-   <td> <code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../strikt.api/-status/index.html"><span class="identifier">Status</span></a></code> <p>The status of the assertion or group of assertions.</p> </td> 
-  </tr> 
-  <tr> 
-   <td> <p><a href="value.html">value</a></p> </td> 
-   <td> <code><span class="keyword">val </span><span class="identifier">value</span><span class="symbol">: </span><a href="index.html#T"><span class="identifier">T</span></a></code> <p>The subject value.</p> </td> 
+   <td> <code><span class="keyword">val </span><span class="identifier">status</span><span class="symbol">: </span><a href="../../strikt.api/-status/index.html"><span class="identifier">Status</span></a></code> <p>The status of the result.</p> </td> 
   </tr> 
  </tbody> 
 </table> 
@@ -124,6 +127,19 @@
   <tr> 
    <td> <p><a href="../-reportable/root.html">root</a></p> </td> 
    <td> <code><span class="keyword">val </span><span class="identifier">root</span><span class="symbol">: </span><a href="../-reportable/index.html"><span class="identifier">Reportable</span></a></code> <p>The root of the assertion graph.</p> </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<h3>Functions</h3> 
+<table> 
+ <tbody> 
+  <tr> 
+   <td> <p><a href="fail.html">fail</a></p> </td> 
+   <td> <code><span class="keyword">fun </span><span class="identifier">fail</span><span class="symbol">(</span><span class="identifier" id="strikt.api.reporting.Result$fail(strikt.api.Failure)/failure">failure</span><span class="symbol">:</span>&nbsp;<a href="../../strikt.api/-failure/index.html"><span class="identifier">Failure</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Mark this result as failed.</p> </td> 
+  </tr> 
+  <tr> 
+   <td> <p><a href="pass.html">pass</a></p> </td> 
+   <td> <code><span class="keyword">fun </span><span class="identifier">pass</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> <p>Mark this result as passed.</p> </td> 
   </tr> 
  </tbody> 
 </table> 

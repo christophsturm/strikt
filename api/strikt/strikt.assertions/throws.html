@@ -64,18 +64,16 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
-<a href="../index.html">strikt.api.reporting</a>&nbsp;/&nbsp;
-<a href="index.html">Subject</a>&nbsp;/&nbsp;
-<a href="./description.html">description</a>
+        <div class="content is-medium"><a href="../index.html">strikt</a>&nbsp;/&nbsp;
+<a href="index.html">strikt.assertions</a>&nbsp;/&nbsp;
+<a href="./throws.html">throws</a>
 <br> 
 <br> 
-<h1>description</h1> 
-<a name="strikt.api.reporting.Subject$description"></a> 
-<code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code> 
-<p>The formattable description of the subject.</p> 
-<h3>Property</h3> 
-<p><a name="description"></a> <code>description</code> - The formattable description of the subject.</p></div>
+<h1>throws</h1> 
+<a name="strikt.assertions$throws(strikt.api.Assertion((kotlin.Function0((kotlin.Unit)))))"></a> 
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="keyword">reified</span>&nbsp;<span class="identifier">E</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">&gt;</span> <a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">throws</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="throws.html#E"><span class="identifier">E</span></a><span class="symbol">&gt;</span></code> 
+<p>Asserts that the subject function throws an exception of type <a href="throws.html#E">E</a> when executed.</p> 
+<p><strong>Return</strong><br> an assertion over the thrown exception, allowing further assertions about messages, root causes, etc.</p></div>
       </div>
     </div>
   </div>

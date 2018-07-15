@@ -64,18 +64,30 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
-<a href="../index.html">strikt.api.reporting</a>&nbsp;/&nbsp;
-<a href="index.html">Subject</a>&nbsp;/&nbsp;
-<a href="./description.html">description</a>
+        <div class="content is-medium"><a href="../index.html">strikt</a>&nbsp;/&nbsp;
+<a href="index.html">strikt.api</a>&nbsp;/&nbsp;
+<a href="./expect.html">expect</a>
 <br> 
 <br> 
-<h1>description</h1> 
-<a name="strikt.api.reporting.Subject$description"></a> 
-<code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code> 
-<p>The formattable description of the subject.</p> 
-<h3>Property</h3> 
-<p><a name="description"></a> <code>description</code> - The formattable description of the subject.</p></div>
+<h1>expect</h1> 
+<a name="strikt.api$expect(strikt.api.expect.T)"></a> 
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api$expect(strikt.api.expect.T)/subject">subject</span><span class="symbol">:</span>&nbsp;<a href="expect.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="expect.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> 
+<p>Start a chain of assertions over <a href="expect.html#strikt.api$expect(strikt.api.expect.T)/subject">subject</a>. This is the entry-point for the assertion API.</p> 
+<h3>Parameters</h3> 
+<p><a name="subject"></a> <code>subject</code> - the subject of the chain of assertions.</p> 
+<p><strong>Return</strong><br> an assertion for <a href="expect.html#strikt.api$expect(strikt.api.expect.T)/subject">subject</a>.</p> 
+<a name="strikt.api$expect(strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))"></a> 
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">expect</span><span class="symbol">(</span><span class="identifier" id="strikt.api$expect(strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/subject">subject</span><span class="symbol">:</span>&nbsp;<a href="expect.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier" id="strikt.api$expect(strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;<a href="-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="expect.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="expect.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> 
+<p>Evaluate a block of assertions over <a href="expect.html#strikt.api$expect(strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/subject">subject</a>. This is the entry-point for the assertion API.</p> 
+<p>This is a shortcut for:</p> 
+<pre><code>    expect(subject).evaluate(block)</code></pre> 
+<h3>Parameters</h3> 
+<p><a name="subject"></a> <code>subject</code> - the subject of the block of assertions.</p> 
+<p><a name="block"></a> <code>block</code> - a closure that can perform multiple assertions that will all be evaluated regardless of whether preceding ones pass or fail.</p> 
+<p><strong>Return</strong><br> an assertion for <a href="expect.html#strikt.api$expect(strikt.api.expect.T, kotlin.Function1((strikt.api.Assertion((strikt.api.expect.T)), kotlin.Unit)))/subject">subject</a>.</p> 
+<p><strong>See Also</strong><br> </p>
+<p><a href="-assertion/evaluate.html">Assertion.evaluate</a></p> 
+<p></p></div>
       </div>
     </div>
   </div>

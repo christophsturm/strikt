@@ -64,18 +64,25 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
-<a href="../index.html">strikt.api.reporting</a>&nbsp;/&nbsp;
-<a href="index.html">Subject</a>&nbsp;/&nbsp;
-<a href="./description.html">description</a>
+        <div class="content is-medium"><a href="../../index.html">strikt</a>&nbsp;/&nbsp;
+<a href="../index.html">strikt.api</a>&nbsp;/&nbsp;
+<a href="index.html">AssertionContext</a>&nbsp;/&nbsp;
+<a href="./fail.html">fail</a>
 <br> 
 <br> 
-<h1>description</h1> 
-<a name="strikt.api.reporting.Subject$description"></a> 
-<code><span class="keyword">var </span><span class="identifier">description</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code> 
-<p>The formattable description of the subject.</p> 
-<h3>Property</h3> 
-<p><a name="description"></a> <code>description</code> - The formattable description of the subject.</p></div>
+<h1>fail</h1> 
+<a name="strikt.api.AssertionContext$fail(kotlin.Any, kotlin.String, kotlin.Throwable)"></a> 
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fail</span><span class="symbol">(</span><span class="identifier" id="strikt.api.AssertionContext$fail(kotlin.Any, kotlin.String, kotlin.Throwable)/actual">actual</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">, </span><span class="identifier" id="strikt.api.AssertionContext$fail(kotlin.Any, kotlin.String, kotlin.Throwable)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;if (actual == null) null else "found %s"<span class="symbol">, </span><span class="identifier" id="strikt.api.AssertionContext$fail(kotlin.Any, kotlin.String, kotlin.Throwable)/cause">cause</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> 
+<p>Report that the assertion failed optionally providing additional detail.</p> 
+<h3>Parameters</h3> 
+<p><a name="actual"></a> <code>actual</code> - the value(s) that violated the assertion.</p> 
+<p><a name="message"></a> <code>message</code> - a message describing the failure.</p> 
+<p><a name="cause"></a> <code>cause</code> - an underlying exception that was the cause of the failure.</p> 
+<a name="strikt.api.AssertionContext$fail(strikt.api.Failure)"></a> 
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">fail</span><span class="symbol">(</span><span class="identifier" id="strikt.api.AssertionContext$fail(strikt.api.Failure)/failure">failure</span><span class="symbol">:</span>&nbsp;<a href="../-failure/index.html"><span class="identifier">Failure</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code> 
+<p>Report that the assertion failed.</p> 
+<h3>Parameters</h3> 
+<p><a name="failure"></a> <code>failure</code> - the details of the failure.</p></div>
       </div>
     </div>
   </div>
