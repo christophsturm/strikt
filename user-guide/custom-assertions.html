@@ -53,6 +53,7 @@
             <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
             <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
             <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+            <a class="navbar-item" href="/user-guide/additional-modules.html">Additional modules</a>
           </div>
         </div>
         <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
@@ -65,9 +66,9 @@
     <div class="columns is-centered">
       <div class="column is-10-desktop">
         <div class="content is-medium"><h1>Custom Assertions</h1> 
-<p>One of the aims of Strikt is that implementing your own assertions is <em>really, really</em> easy.<br> Assertion functions are <a href="https://kotlinlang.org/docs/reference/extensions.html">extension functions</a> on the interface <code>Assertion&lt;T&gt;</code>.</p> 
+<p>One of the aims of Strikt is that implementing your own assertions is <em>really, really</em> easy. Assertion functions are <a href="https://kotlinlang.org/docs/reference/extensions.html">extension functions</a> on the interface <code>Assertion&lt;T&gt;</code>.</p> 
 <h2>Atomic assertions</h2> 
-<p>"Atomic" assertions produce a single message on failure.<br> They call <code>assert</code> passing a lambda with the assertion logic that calls <code>pass()</code> or <code>fail()</code>.</p> 
+<p>"Atomic" assertions produce a single message on failure. They call <code>assert</code> passing a lambda with the assertion logic that calls <code>pass()</code> or <code>fail()</code>.</p> 
 <p>The standard assertions <code>isNull</code>, <code>isEqualTo</code>, <code>isA&lt;T&gt;</code> and many others are simple assertions implemented just like this.</p> 
 <p>Let's imagine we're implementing an assertion function for <code>java.time.LocalDate</code> that tests if the represented date is a leap day.</p> 
 <pre><code class="language-kotlin">fun Assertion&lt;LocalDate&gt;.isStTibsDay(): Assertion&lt;LocalDate&gt; =
@@ -89,10 +90,10 @@
 <pre><code>Expect that 2018-05-01 (1 failure)
     is St. Tib's Day 
 </code></pre> 
-<p>!!! note<br> The method <code>assert</code> accepts a description for the assertion being made and a lambda function <code>AssertionContext&lt;T&gt;.() -&gt; Unit</code>.<br> That <code>AssertionContext&lt;T&gt;</code> receiver provides the lambda everything it needs to access the <code>subject</code> of the assertion and report the result via the <code>pass()</code> or <code>fail()</code> method.</p> 
+<p>!!! note The method <code>assert</code> accepts a description for the assertion being made and a lambda function <code>AssertionContext&lt;T&gt;.() -&gt; Unit</code>. That <code>AssertionContext&lt;T&gt;</code> receiver provides the lambda everything it needs to access the <code>subject</code> of the assertion and report the result via the <code>pass()</code> or <code>fail()</code> method.</p> 
 <h2>Describing the "actual" value</h2> 
-<p>For assertions that perform a comparison between actual and expected values it is usually helpful to describe the value that was incorrect.<br> That way any assertion failure message will be more helpful.</p> 
-<p>In order to do this, Strikt provides an overridden version of <code>fail()</code> that accepts a message string and the actual value found.<br> The message string should contain a format placeholder for the value.</p> 
+<p>For assertions that perform a comparison between actual and expected values it is usually helpful to describe the value that was incorrect. That way any assertion failure message will be more helpful.</p> 
+<p>In order to do this, Strikt provides an overridden version of <code>fail()</code> that accepts a message string and the actual value found. The message string should contain a format placeholder for the value.</p> 
 <pre><code class="language-kotlin">fun Assertion&lt;LocalDate&gt;.isStTibsDay(): Assertion&lt;LocalDate&gt; =
   assert("is St. Tib's Day") { 
     when (MonthDay.from(subject)) {
@@ -119,7 +120,7 @@
 </code></pre> 
 <p>You should not use this form when you want to provide a meaningful description of the actual value but for simple assertions it's slightly less verbose.</p> 
 <h2>Composed assertions</h2> 
-<p>For more complex assertion implementations you can "nest" sub-assertions inside your overall assertion.<br> Composed assertions' results are reported under the overall result which is useful for providing detailed diagnostic information in case of a failure.</p> 
+<p>For more complex assertion implementations you can "nest" sub-assertions inside your overall assertion. Composed assertions' results are reported under the overall result which is useful for providing detailed diagnostic information in case of a failure.</p> 
 <p>Composed assertions are useful for things like:</p> 
 <ul> 
  <li>applying assertions to multiple properties of an object, for example for a field-by-field comparison.</li> 
@@ -150,7 +151,7 @@
             is not null  
 </code></pre> 
 <p>As well as the overall assertion failure message we get a detailed breakdown allowing us to easily find exactly where the problem is.</p> 
-<p>Several assertion functions in Strikt's standard assertions library use nested assertions.<br> For example, <code>Assertion&lt;Iterable&lt;E&gt;&gt;.all</code> applies assertions to each element of an <code>Iterable</code> then passes the overall assertion if (and only if) all those nested assertions passed (<code>allPassed</code>).<br> On the other hand <code>Assertion&lt;Iterable&lt;E&gt;&gt;.any</code> applies assertions to the elements of an <code>Iterable</code> but will pass the overall assertion if at least one of those nested assertions passed (<code>anyPassed</code>).<br> The <code>Assertion&lt;Iterable&lt;E&gt;&gt;.none</code> assertion passes only if <code>allFailed</code> is true for its nested assertions!</p></div>
+<p>Several assertion functions in Strikt's standard assertions library use nested assertions. For example, <code>Assertion&lt;Iterable&lt;E&gt;&gt;.all</code> applies assertions to each element of an <code>Iterable</code> then passes the overall assertion if (and only if) all those nested assertions passed (<code>allPassed</code>). On the other hand <code>Assertion&lt;Iterable&lt;E&gt;&gt;.any</code> applies assertions to the elements of an <code>Iterable</code> but will pass the overall assertion if at least one of those nested assertions passed (<code>anyPassed</code>). The <code>Assertion&lt;Iterable&lt;E&gt;&gt;.none</code> assertion passes only if <code>allFailed</code> is true for its nested assertions!</p></div>
   <nav class="pagination is-medium" role="navigation" aria-label="pagination">
     <a class="pagination-previous button is-large is-link is-outlined"
        href="mapping.html" >
@@ -158,7 +159,8 @@
         <i class="fas fa-arrow-left"></i>
       </span>
     </a>
-    <a class="pagination-next button is-large is-link is-outlined" disabled>
+    <a class="pagination-next button is-large is-link is-outlined" href="additional-modules.html"
+       >
       <span class="icon">
         <i class="fas fa-arrow-right"></i>
       </span>

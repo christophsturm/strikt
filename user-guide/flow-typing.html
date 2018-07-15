@@ -53,6 +53,7 @@
             <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
             <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
             <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+            <a class="navbar-item" href="/user-guide/additional-modules.html">Additional modules</a>
           </div>
         </div>
         <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
@@ -66,11 +67,11 @@
       <div class="column is-10-desktop">
         <div class="content is-medium"><h1>Strongly Typed Assertions</h1> 
 <p>Strikt's API is designed to work with Kotlin's strong type system.</p> 
-<p>Strikt's assertion API uses the class <code>Assertion&lt;T&gt;</code>, with the generic type <code>T</code> representing the (declared) type of the assertion subject.<br> Assertion functions such as <code>isEqualTo</code> are implemented as extension functions on <code>Assertion</code> with an appropriate generic type.</p> 
+<p>Strikt's assertion API uses the class <code>Assertion&lt;T&gt;</code>, with the generic type <code>T</code> representing the (declared) type of the assertion subject. Assertion functions such as <code>isEqualTo</code> are implemented as extension functions on <code>Assertion</code> with an appropriate generic type.</p> 
 <p>For example <code>isEqualTo</code> is an extension function on <code>Assertion&lt;Any?&gt;</code> as it's useful for many types of subject whereas <code>isEqualToIgnoringCase</code> is an extension function on <code>Assertion&lt;CharSequence&gt;</code> since it only makes sense to use it on string-like things.</p> 
 <p>Some assertion functions will return an <code>Assertion</code> <em>different</em>, more specific, generic type to the one they were called on.</p> 
 <h2>Nullable subjects</h2> 
-<p>For example, if the subject of an assertion is a nullable type (in other words it's an <code>Assertion&lt;T?&gt;</code>) the assertion methods <code>isNull()</code> and <code>isNotNull()</code> are available.<br> The return type of <code>isNotNull()</code> is <code>Assertion&lt;T&gt;</code> because we now <em>know</em> the subject is not null.<br> You will find IDE code-completion will no longer offer the <code>isNull()</code> and <code>isNotNull()</code> assertion methods.</p> 
+<p>For example, if the subject of an assertion is a nullable type (in other words it's an <code>Assertion&lt;T?&gt;</code>) the assertion methods <code>isNull()</code> and <code>isNotNull()</code> are available. The return type of <code>isNotNull()</code> is <code>Assertion&lt;T&gt;</code> because we now <em>know</em> the subject is not null. You will find IDE code-completion will no longer offer the <code>isNull()</code> and <code>isNotNull()</code> assertion methods.</p> 
 <h2>Narrowing assertions</h2> 
 <p>Another example is making assertions about a subject's specific runtime type, or "narrowing".</p> 
 <p>For example:</p> 

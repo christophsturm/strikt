@@ -53,6 +53,7 @@
             <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
             <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
             <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+            <a class="navbar-item" href="/user-guide/additional-modules.html">Additional modules</a>
           </div>
         </div>
         <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
@@ -65,9 +66,9 @@
     <div class="columns is-centered">
       <div class="column is-10-desktop">
         <div class="content is-medium"><h1>Assertion styles</h1> 
-<p>Two different styles of assertion -- chained and block -- are supported for different use-cases.<br> You can mix and match both in the same test and even nest chained assertions inside block assertions.</p> 
+<p>Two different styles of assertion -- chained and block -- are supported for different use-cases. You can mix and match both in the same test and even nest chained assertions inside block assertions.</p> 
 <h2>Chained assertions</h2> 
-<p>Chained assertions use a fluent API similar to AssertJ.<br> They fail fast.<br> That is, the first assertion that fails breaks the chain and further assertions are not evaluated.</p> 
+<p>Chained assertions use a fluent API similar to AssertJ. They fail fast. That is, the first assertion that fails breaks the chain and further assertions are not evaluated.</p> 
 <p>Each assertion in the chain returns an <code>Assertion</code> object that supports further assertions.</p> 
 <pre><code class="language-kotlin">val subject = "fnord"
 expect(subject)
@@ -81,8 +82,8 @@ expect(subject)
 </code></pre> 
 <p>Notice that the <code>isUpperCase()</code> assertion is not applied as the earlier <code>hasLength(1)</code> assertion failed.</p> 
 <h2>Block assertions</h2> 
-<p>Block assertions are declared in a lambda whose receiver is an <code>Assertion&lt;T&gt;</code> object.<br> They allow multiple assertions (or assertion chains) to be evaluated against the subject.</p> 
-<p>Block assertions do <em>not</em> fail fast.<br> That is, all assertions in the block are evaluated and the result of the "compound" assertion will include results for all the assertions made in the block.</p> 
+<p>Block assertions are declared in a lambda whose receiver is an <code>Assertion&lt;T&gt;</code> object. They allow multiple assertions (or assertion chains) to be evaluated against the subject.</p> 
+<p>Block assertions do <em>not</em> fail fast. That is, all assertions in the block are evaluated and the result of the "compound" assertion will include results for all the assertions made in the block.</p> 
 <pre><code class="language-kotlin">val subject = "fnord"
 expect(subject) {
   isA&lt;String&gt;()
@@ -109,7 +110,7 @@ expect(subject) {
     is less than 1 : found 1
     is greater than 1 : found 1
 </code></pre> 
-<p>Note the <code>isA&lt;Int&gt;</code> assertion (that would have failed) was not evaluated since it was chained after <code>lessThan(1)</code> which failed.<br> The <code>greaterThan(1)</code> assertion <em>was</em> evaluated since it was not part of the same chain.</p></div>
+<p>Note the <code>isA&lt;Int&gt;</code> assertion (that would have failed) was not evaluated since it was chained after <code>lessThan(1)</code> which failed. The <code>greaterThan(1)</code> assertion <em>was</em> evaluated since it was not part of the same chain.</p></div>
   <nav class="pagination is-medium" role="navigation" aria-label="pagination">
     <a class="pagination-previous button is-large is-link is-outlined"
        href="getting-started.html" >

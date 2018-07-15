@@ -53,6 +53,7 @@
             <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
             <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
             <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+            <a class="navbar-item" href="/user-guide/additional-modules.html">Additional modules</a>
           </div>
         </div>
         <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
@@ -70,7 +71,7 @@
 expect(list.first()).isEqualTo("fnord")
 expect(person.name).isEqualTo("Ziggy")
 </code></pre> 
-<p>Sometimes it's useful to be able to transform an assertion on a subject to an assertion on a property of that subject, or the result of a method call.<br> Particularly when using soft assertion blocks.</p> 
+<p>Sometimes it's useful to be able to transform an assertion on a subject to an assertion on a property of that subject, or the result of a method call. Particularly when using soft assertion blocks.</p> 
 <p>Strikt allows for this using the <code>Assertion&lt;T&gt;.map</code> method.</p> 
 <h2>Mapping with lambdas</h2> 
 <p>The method takes a lambda whose receiver is the current subject and returns an <code>Assertion&lt;R&gt;</code> where <code>R</code> is whatever the lambda returns.</p> 
@@ -82,7 +83,7 @@ expect(subject) {
 }
 </code></pre> 
 <h2>Mapping with property or method references</h2> 
-<p>If you use a Kotlin property or Java method reference as the lambda passed to <code>map</code>, Strikt will automatically derive the property name and use it as the subject description on the returned assertion.<br> This is useful for generating good quality assertion output with minimal effort.</p> 
+<p>If you use a Kotlin property or Java method reference as the lambda passed to <code>map</code>, Strikt will automatically derive the property name and use it as the subject description on the returned assertion. This is useful for generating good quality assertion output with minimal effort.</p> 
 <p>For example, if the previous example fails it will format the error message like this:</p> 
 <pre><code>Person[name: Ziggy, birthDate: 1972-06-16] (2 failures) 
     Expect that "Ziggy" (1 failure)
@@ -121,7 +122,7 @@ expect(subject) {
 }
 </code></pre> 
 <h2>Built-in mappings</h2> 
-<p>Strikt has a number of built in mapping properties and functions such as <code>Assertion&lt;List&lt;E&gt;&gt;.first()</code> which returns an <code>Assertion&lt;E&gt;</code> whose subject is the first element of the list.<br> See the <a href="/api/strikt-core/strikt.api/-assertion/">API docs</a> for details.</p></div>
+<p>Strikt has a number of built in mapping properties and functions such as <code>Assertion&lt;List&lt;E&gt;&gt;.first()</code> which returns an <code>Assertion&lt;E&gt;</code> whose subject is the first element of the list. See the <a href="/api/strikt-core/strikt.api/-assertion/">API docs</a> for details.</p></div>
   <nav class="pagination is-medium" role="navigation" aria-label="pagination">
     <a class="pagination-previous button is-large is-link is-outlined"
        href="flow-typing.html" >

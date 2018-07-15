@@ -53,6 +53,7 @@
             <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
             <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
             <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+            <a class="navbar-item" href="/user-guide/additional-modules.html">Additional modules</a>
           </div>
         </div>
         <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
@@ -65,15 +66,15 @@
     <div class="columns is-centered">
       <div class="column is-10-desktop">
         <div class="content is-medium"><h1>Getting Started</h1> 
-<p>Strikt does not depend on any particular test runner.<br> It can be used with JUnit, Spek or any other runner that supports tests written in Kotlin.</p> 
+<p>Strikt does not depend on any particular test runner. It can be used with JUnit, Spek or any other runner that supports tests written in Kotlin.</p> 
 <h2>Installation</h2> 
-<p>Strikt is available from JCenter.<br> Add the following to your <code>build.gradle</code>.</p> 
+<p>Strikt is available from JCenter. Add the following to your <code>build.gradle</code>.</p> 
 <pre><code class="language-groovy">repositories {
   jcenter()
 }
 
 dependencies {
-  testCompile "io.strikt:strikt-core:+"
+  testCompile "io.strikt:strikt-core:v0.9.0"
 }
 </code></pre> 
 <h2>Importing the Strikt API</h2> 
@@ -81,7 +82,7 @@ dependencies {
 <pre><code class="language-kotlin">import strikt.api.*
 import strikt.assertions.*
 </code></pre> 
-<p>The <code>strikt.api</code> package contains top level functions such as <code>expect</code> and <code>throws</code> that you will use to create assertions as well as the API classes you will interact with if you decide to implement your own assertion functions.<br> The <code>strikt.assertions</code> package contains the standard library of assertion functions.</p></div>
+<p>The <code>strikt.api</code> package contains top level functions such as <code>expect</code> and <code>throws</code> that you will use to create assertions as well as the API classes you will interact with if you decide to implement your own assertion functions. The <code>strikt.assertions</code> package contains the standard library of assertion functions.</p></div>
   <nav class="pagination is-medium" role="navigation" aria-label="pagination">
     <a class="pagination-previous button is-large is-link is-outlined"
        disabled>

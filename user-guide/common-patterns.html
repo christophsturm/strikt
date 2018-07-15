@@ -53,6 +53,7 @@
             <a class="navbar-item" href="/user-guide/flow-typing.html">Strongly Typed Assertions</a>
             <a class="navbar-item" href="/user-guide/mapping.html">Mapping Over Assertion Subjects</a>
             <a class="navbar-item" href="/user-guide/custom-assertions.html">Custom assertions</a>
+            <a class="navbar-item" href="/user-guide/additional-modules.html">Additional modules</a>
           </div>
         </div>
         <a class="navbar-item" href="/api/strikt-core"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
@@ -67,7 +68,7 @@
         <div class="content is-medium"><h1>Common Assertion Patterns</h1> 
 <p>This section contains some common uses of Strikt's standard assertion library.</p> 
 <h2>Assertions on elements of a collection</h2> 
-<p>Some assertions on collections include sub-assertions applied to the elements of the collection.<br> For example, we can assert that <em>all</em> elements conform to a repeated assertion.</p> 
+<p>Some assertions on collections include sub-assertions applied to the elements of the collection. For example, we can assert that <em>all</em> elements conform to a repeated assertion.</p> 
 <pre><code class="language-kotlin">val subject = setOf("catflap", "rubberplant", "marzipan")
 expect(subject).all {
   isLowerCase()
@@ -84,7 +85,7 @@ expect(subject).all {
 </code></pre> 
 <p>The results are broken down by individual elements in the collection so it's easy to see which failed.</p> 
 <h2>Asserting exceptions are thrown</h2> 
-<p>To assert that some code throws an exception you can use an assertion on a lambda <code>() -&gt; Unit</code> that performs the operation that should throw an exception and the <code>throws&lt;E&gt;</code> assertion function.<br> For example:</p> 
+<p>To assert that some code throws an exception you can use an assertion on a lambda <code>() -&gt; Unit</code> that performs the operation that should throw an exception and the <code>throws&lt;E&gt;</code> assertion function. For example:</p> 
 <pre><code class="language-kotlin">expect { service.computeMeaning() }
   .throws&lt;TooMuchFlaxException&gt;()
 </code></pre> 
