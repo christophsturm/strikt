@@ -1,3 +1,6 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:strikt.protobuf$isEmpty(strikt.api.Assertion((com.google.protobuf.Any)))strikt.protobuf/strikt.api.-assertion/is-empty.html
 $dokka.location:strikt.protobuf$unpack(strikt.api.Assertion((com.google.protobuf.Any)))strikt.protobuf/strikt.api.-assertion/unpack.html
 $dokka.location:strikt.protobuf$unpacksTo(strikt.api.Assertion((com.google.protobuf.Any)))strikt.protobuf/strikt.api.-assertion/unpacks-to.html
 strikt.protobuf
