@@ -1,0 +1,9 @@
+type=page
+status=published
+~~~~~~
+$dokka.format:html
+$dokka.linkExtension:html
+
+strikt.api
+strikt.api.reporting
+strikt.assertions

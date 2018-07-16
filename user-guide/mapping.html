@@ -56,7 +56,14 @@
             <a class="navbar-item" href="/user-guide/additional-modules.html">Additional modules</a>
           </div>
         </div>
-        <a class="navbar-item" href="/api/strikt"><span class="icon has-text-info"><i class="fas fa-file-alt"></i></span><span>API</span></a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"><span class="icon has-text-info"><i
+            class="fas fa-book"></i></span><span>API</span></a>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="/api/strikt-core">strikt-core</a>
+            <a class="navbar-item" href="/api/strikt-protobuf">strikt-protobuf</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -122,7 +129,7 @@ expect(subject) {
 }
 </code></pre> 
 <h2>Built-in mappings</h2> 
-<p>Strikt has a number of built in mapping properties and functions such as <code>Assertion&lt;List&lt;E&gt;&gt;.first()</code> which returns an <code>Assertion&lt;E&gt;</code> whose subject is the first element of the list. See the <a href="/api/strikt/strikt.api/-assertion/">API docs</a> for details.</p></div>
+<p>Strikt has a number of built in mapping properties and functions such as <code>Assertion&lt;List&lt;E&gt;&gt;.first()</code> which returns an <code>Assertion&lt;E&gt;</code> whose subject is the first element of the list. See the <a href="/api/strikt-core/strikt.api/-assertion/">API docs</a> for details.</p></div>
   <nav class="pagination is-medium" role="navigation" aria-label="pagination">
     <a class="pagination-previous button is-large is-link is-outlined"
        href="flow-typing.html" >
