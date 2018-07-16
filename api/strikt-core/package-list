@@ -1,6 +1,3 @@
-$dokka.format:html
-$dokka.linkExtension:html
-
 strikt.api
 strikt.api.reporting
 strikt.assertions
