@@ -3,4 +3,3 @@ $dokka.linkExtension:html
 
 strikt.api
 strikt.assertions
-strikt.internal
