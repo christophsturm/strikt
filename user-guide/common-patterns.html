@@ -83,12 +83,14 @@ expect(subject).all {
 }
 </code></pre> 
 <p>This produces the output:</p> 
-<pre><code>Expect that [catflap, rubberplant, marzipan] (1 failure)
-    all elements match: (2 failures)
-        Expect that "rubberplant" (1 failure)
-            starts with 'c'
-        Expect that "marzipan" (1 failure)
-            starts with 'c'
+<pre><code>▼ Expect that [catflap, rubberplant, marzipan]:
+  ✗ all elements match:
+    ▼ Expect that "catflap":
+      ✓ starts with 'c'
+    ▼ Expect that "rubberplant":
+      ✗ starts with 'c'
+    ▼ Expect that "marzipan":
+      ✗ starts with 'c'
 </code></pre> 
 <p>The results are broken down by individual elements in the collection so it's easy to see which failed.</p> 
 <h2>Asserting exceptions are thrown</h2> 
@@ -96,7 +98,7 @@ expect(subject).all {
 <pre><code class="language-kotlin">expect { service.computeMeaning() }
   .throws&lt;TooMuchFlaxException&gt;()
 </code></pre> 
-<p>The <code>throws&lt;E&gt;</code> function returns an <code>Assertion&lt;E&gt;</code> so you can chain assertions about the exception after it.</p> 
+<p>The <code>throws&lt;E&gt;</code> function returns an <code>Assertion.Builder&lt;E&gt;</code> so you can chain assertions about the exception after it.</p> 
 <p>There is also a top level function <code>throws( () -&gt; Unit )</code> that makes this even more concise.</p> 
 <pre><code class="language-kotlin">throws&lt;TooMuchFlaxException&gt; { 
   service.computeMeaning() 

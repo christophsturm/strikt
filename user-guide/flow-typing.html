@@ -74,11 +74,11 @@
       <div class="column is-10-desktop">
         <div class="content is-medium"><h1>Strongly Typed Assertions</h1> 
 <p>Strikt's API is designed to work with Kotlin's strong type system.</p> 
-<p>Strikt's assertion API uses the class <code>Assertion&lt;T&gt;</code>, with the generic type <code>T</code> representing the (declared) type of the assertion subject. Assertion functions such as <code>isEqualTo</code> are implemented as extension functions on <code>Assertion</code> with an appropriate generic type.</p> 
-<p>For example <code>isEqualTo</code> is an extension function on <code>Assertion&lt;Any?&gt;</code> as it's useful for many types of subject whereas <code>isEqualToIgnoringCase</code> is an extension function on <code>Assertion&lt;CharSequence&gt;</code> since it only makes sense to use it on string-like things.</p> 
-<p>Some assertion functions will return an <code>Assertion</code> <em>different</em>, more specific, generic type to the one they were called on.</p> 
+<p>Strikt's assertion API uses the interface <code>Assertion.Builder&lt;T&gt;</code>, with the generic type <code>T</code> representing the (declared) type of the assertion subject. Assertion functions such as <code>isEqualTo</code> are implemented as extension functions on <code>Assertion.Builder</code> with an appropriate generic type.</p> 
+<p>For example <code>isEqualTo</code> is an extension function on <code>Assertion.Builder&lt;Any?&gt;</code> as it's useful for many types of subject whereas <code>isEqualToIgnoringCase</code> is an extension function on <code>Assertion.Builder&lt;CharSequence&gt;</code> since it only makes sense to use it on string-like things.</p> 
+<p>Some assertion functions will return an <code>Assertion.Builder</code> with a <em>different</em>, more specific, generic type to the one they were called on.</p> 
 <h2>Nullable subjects</h2> 
-<p>For example, if the subject of an assertion is a nullable type (in other words it's an <code>Assertion&lt;T?&gt;</code>) the assertion methods <code>isNull()</code> and <code>isNotNull()</code> are available. The return type of <code>isNotNull()</code> is <code>Assertion&lt;T&gt;</code> because we now <em>know</em> the subject is not null. You will find IDE code-completion will no longer offer the <code>isNull()</code> and <code>isNotNull()</code> assertion methods.</p> 
+<p>For example, if the subject of an assertion is a nullable type (in other words it's an <code>Assertion.Builder&lt;T?&gt;</code>) the assertion methods <code>isNull()</code> and <code>isNotNull()</code> are available. The return type of <code>isNotNull()</code> is <code>Assertion.Builder&lt;T&gt;</code> because we now <em>know</em> the subject is not null. You will find IDE code-completion will no longer offer the <code>isNull()</code> and <code>isNotNull()</code> assertion methods.</p> 
 <h2>Narrowing assertions</h2> 
 <p>Another example is making assertions about a subject's specific runtime type, or "narrowing".</p> 
 <p>For example:</p> 
@@ -91,16 +91,16 @@ expect(subject.get("name"))
   .isA&lt;String&gt;()
   .hasLength(3)
 </code></pre> 
-<p>The return type of the subject map's <code>get()</code> method is <code>Any</code> but using the narrowing assertion <code>isA&lt;T&gt;()</code> we can both assert the type of the value and, because the compiler now knows it is dealing with an <code>Assertion&lt;String&gt;</code> or an <code>Assertion&lt;Number&gt;</code>, we can use more specialized assertion methods that are only available for those subject types.</p> 
+<p>The return type of the subject map's <code>get()</code> method is <code>Any</code> but using the narrowing assertion <code>isA&lt;T&gt;()</code> we can both assert the type of the value and, because the compiler now knows it is dealing with an <code>Assertion.Builder&lt;String&gt;</code> or an <code>Assertion.Builder&lt;Number&gt;</code>, we can use more specialized assertion methods that are only available for those subject types.</p> 
 <p>Without the <code>isA&lt;T&gt;()</code> assertion the code would not compile:</p> 
 <pre><code class="language-kotlin">val subject: Map&lt;String, Any&gt; = mapOf("count" to 1, "name" to "Rob")
 expect(subject.get("count"))
   .isGreaterThan(0) 
-  // isGreaterThan does not exist on Assertion&lt;Any&gt;
+  // isGreaterThan does not exist on Assertion.Builder&lt;Any&gt;
   
 expect(subject.get("name"))
   .hasLength(3) 
-  // hasLength does not exist on Assertion&lt;Any&gt;
+  // hasLength does not exist on Assertion.Builder&lt;Any&gt;
 </code></pre> 
 <p>This mechanism means that IDE code-completion is optimally helpful as only assertion methods that are appropriate to the subject type will be suggested.</p></div>
   <nav class="pagination is-medium" role="navigation" aria-label="pagination">

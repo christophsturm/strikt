@@ -77,39 +77,35 @@
  <tbody> 
   <tr> 
    <td> <a href="../strikt.api/-assertion/index.html">strikt.api.Assertion</a></td> 
-   <td> <p>Holds a subject of type <a href="../strikt.api/-assertion/index.html#T">T</a> that you can then make assertions about.</p> </td> 
+   <td> <p>Allows assertion implementations to assertAll <a href="../strikt.api/-assertion/subject.html">subject</a> and determine a result.</p> </td> 
   </tr> 
   <tr> 
-   <td> <a href="../strikt.api/-assertion-context/index.html">strikt.api.AssertionContext</a></td> 
-   <td> <p>The receiver of the lambda passed to <a href="../strikt.api/-assertion/assert.html">Assertion.assert</a>. This class allows evaluation of the <a href="../strikt.api/-assertion-context/subject.html">subject</a> value, or of composed assertions, ultimately resulting in a call to <a href="../strikt.api/-assertion-context/pass.html">pass</a> or <a href="../strikt.api/-assertion-context/fail.html">fail</a>.</p> </td> 
+   <td> <a href="../strikt.api/-assertion-composer/index.html">strikt.api.AssertionComposer</a></td> 
+   <td> <p>Allows assertions to be composed, or nested. This class is the receiver of the lambda passed to <a href="../strikt.api/-assertion/-builder/compose.html">Builder.compose</a>.</p> </td> 
   </tr> 
   <tr> 
-   <td> <a href="../strikt.api/-composed-assertion-context/index.html">strikt.api.ComposedAssertionContext</a></td> 
-   <td> <p>Allows the containing assertion to make decisions about whether it has passed or failed based on the results of composed assertions.</p> </td> 
+   <td> <a href="../strikt.api/-atomic-assertion.html">strikt.api.AtomicAssertion</a></td> 
+   <td> <p>An assertion of a single condition on a subject.</p> </td> 
   </tr> 
   <tr> 
-   <td> <a href="../strikt.api/-composed-assertions/index.html">strikt.api.ComposedAssertions</a></td> 
-   <td> <p>Allows assertions to be composed, or nested. This class is the receiver of the lambda passed to <a href="../strikt.api/-assertion/compose.html">Assertion.compose</a>.</p> </td> 
+   <td> <a href="../strikt.api/-compound-assertion/index.html">strikt.api.CompoundAssertion</a></td> 
+   <td> <p>An assertion composed of multiple conditions whose overall result is determined by some aggregation of those conditions' results.</p> </td> 
   </tr> 
   <tr> 
-   <td> <a href="../strikt.api/-failure/index.html">strikt.api.Failure</a></td> 
-   <td> <p>A description of an individual assertion failure.</p> </td> 
+   <td> <a href="../strikt.api/-compound-assertions/index.html">strikt.api.CompoundAssertions</a></td> 
+   <td> </td> 
   </tr> 
   <tr> 
-   <td> <a href="../strikt.api.reporting/-reportable/index.html">strikt.api.reporting.Reportable</a></td> 
-   <td> <p>Part of a graph of assertion results.</p> </td> 
+   <td> <a href="../strikt.api/-describeable-builder/index.html">strikt.api.DescribeableBuilder</a></td> 
+   <td> </td> 
   </tr> 
   <tr> 
-   <td> <a href="../strikt.api.reporting/-result/index.html">strikt.api.reporting.Result</a></td> 
-   <td> <p>Represents the result of an assertion or a group of assertions.</p> </td> 
+   <td> <a href="../strikt.internal/-described/index.html">strikt.internal.Described</a></td> 
+   <td> </td> 
   </tr> 
   <tr> 
-   <td> <a href="../strikt.api/-status/index.html">strikt.api.Status</a></td> 
-   <td> <p>The basic state of an assertion result.</p> </td> 
-  </tr> 
-  <tr> 
-   <td> <a href="../strikt.api.reporting/-subject/index.html">strikt.api.reporting.Subject</a></td> 
-   <td> <p>THe subject of an assertion.</p> </td> 
+   <td> <a href="../strikt.assertions/-pantheon/index.html">strikt.assertions.Pantheon</a></td> 
+   <td> </td> 
   </tr> 
  </tbody> 
 </table></div>
