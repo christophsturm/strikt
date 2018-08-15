@@ -81,7 +81,7 @@
  <br> 
  <ul> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-  <a href="strikt.api/-assertion/index.html"><span class="keyword">interface </span><span class="identifier">Assertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></a>
+  <a href="strikt.api/-assertion/index.html"><span class="keyword">interface </span><span class="identifier">Assertion</span></a>
   <br> 
   <ul> 
    <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
@@ -89,17 +89,15 @@
    <br> 
    <ul> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/assert.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/assert.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/assert">assert</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/assert">assert</span>
     <span class="symbol">:</span>&nbsp;
     <a href="strikt.api/-atomic-assertion.html"><span class="identifier">AtomicAssertion</span></a>
-    <span class="symbol">&lt;</span>
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">&gt;</span>
     <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
@@ -111,22 +109,20 @@
     <span class="symbol">&gt;</span>
     <br> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/assert.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/assert.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/expected">expected</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/expected">expected</span>
     <span class="symbol">:</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>
     <span class="symbol">?</span>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/assert">assert</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/assert">assert</span>
     <span class="symbol">:</span>&nbsp;
     <a href="strikt.api/-atomic-assertion.html"><span class="identifier">AtomicAssertion</span></a>
-    <span class="symbol">&lt;</span>
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">&gt;</span>
     <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
@@ -138,22 +134,23 @@
     <span class="symbol">&gt;</span>
     <br> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/compose.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">compose</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/compose.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">compose</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/expected">expected</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/expected">expected</span>
     <span class="symbol">:</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>
     <span class="symbol">?</span>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/assertions">assertions</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/assertions">assertions</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion-composer/index.html"><span class="identifier">AssertionComposer</span></a>
+    <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
     <span class="symbol">&lt;</span>
     <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">&gt;</span>
     <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
@@ -165,17 +162,18 @@
     <span class="symbol">&gt;</span>
     <br> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/compose.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">compose</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/compose.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">compose</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/assertions">assertions</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/assertions">assertions</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion-composer/index.html"><span class="identifier">AssertionComposer</span></a>
+    <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
     <span class="symbol">&lt;</span>
     <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">&gt;</span>
     <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
@@ -187,10 +185,8 @@
     <span class="symbol">&gt;</span>
     <br> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/map.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">map</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$map(kotlin.Function1((strikt.api.Assertion.Builder.T, strikt.api.Assertion.Builder.map.R)))/function">function</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/map.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">map</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$map(kotlin.Function1((strikt.api.Assertion.Builder.T, strikt.api.Assertion.Builder.map.R)))/function">function</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span></a>
     <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">.</span>
-    <span class="symbol">(</span>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="strikt.api/-assertion/-builder/map.html#R"><span class="identifier">R</span></a>
@@ -207,9 +203,8 @@
     <span class="symbol">, </span>
     <span class="identifier" id="strikt.api.Assertion.Builder$map(kotlin.String, kotlin.Function1((strikt.api.Assertion.Builder.T, strikt.api.Assertion.Builder.map.R)))/function">function</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="strikt.api/-assertion/-builder/map.html#R"><span class="identifier">R</span></a>
@@ -233,9 +228,8 @@
     <span class="symbol">, </span>
     <span class="identifier" id="strikt.api.Assertion.Builder$passesIf(kotlin.String, kotlin.Function1((strikt.api.Assertion.Builder.T, kotlin.Boolean)))/assert">assert</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>
@@ -257,9 +251,8 @@
     <span class="symbol">, </span>
     <span class="identifier" id="strikt.api.Assertion.Builder$passesIf(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.Assertion.Builder.T, kotlin.Boolean)))/assert">assert</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>
@@ -296,37 +289,14 @@
    <a href="strikt.api/-assertion/pass.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pass</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span></a>
    <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
    <br> 
-   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-   <a href="strikt.api/-assertion/subject.html"><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">subject</span><span class="symbol">: </span></a>
-   <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
-   <br> 
   </ul> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-  <a href="strikt.api/-assertion-composer/index.html"><span class="keyword">interface </span><span class="identifier">AssertionComposer</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
-  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/-assertion-composer/index.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
-  <br> 
-  <ul> 
-   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-   <a href="strikt.api/-assertion-composer/subject.html"><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">subject</span><span class="symbol">: </span></a>
-   <a href="strikt.api/-assertion-composer/index.html#T"><span class="identifier">T</span></a>
-   <br> 
-  </ul> 
-  <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-  <a href="strikt.api/-atomic-assertion.html"><span class="keyword">interface </span><span class="identifier">AtomicAssertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="strikt.api/-atomic-assertion.html"><span class="keyword">interface </span><span class="identifier">AtomicAssertion</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/-atomic-assertion.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
   <br> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-  <a href="strikt.api/-compound-assertion/index.html"><span class="keyword">interface </span><span class="identifier">CompoundAssertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="strikt.api/-compound-assertion/index.html"><span class="keyword">interface </span><span class="identifier">CompoundAssertion</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/-compound-assertion/index.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
   <br> 
   <ul> 
    <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
@@ -351,11 +321,8 @@
   <br> 
   <ul> 
    <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-   <a href="strikt.api/-compound-assertions/then.html"><span class="keyword">abstract</span> <span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">then</span><span class="symbol">(</span><span class="identifier" id="strikt.api.CompoundAssertions$then(kotlin.Function1((strikt.api.CompoundAssertion((strikt.api.CompoundAssertions.T)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;</a>
+   <a href="strikt.api/-compound-assertions/then.html"><span class="keyword">abstract</span> <span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">then</span><span class="symbol">(</span><span class="identifier" id="strikt.api.CompoundAssertions$then(kotlin.Function1((strikt.api.CompoundAssertion, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;</a>
    <a href="strikt.api/-compound-assertion/index.html"><span class="identifier">CompoundAssertion</span></a>
-   <span class="symbol">&lt;</span>
-   <a href="strikt.api/-compound-assertions/index.html#T"><span class="identifier">T</span></a>
-   <span class="symbol">&gt;</span>
    <span class="symbol">.</span>
    <span class="symbol">(</span>
    <span class="symbol">)</span>&nbsp;
@@ -394,7 +361,7 @@
  <br> 
  <ul> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-  <a href="strikt.api/-assertion/index.html"><span class="keyword">interface </span><span class="identifier">Assertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></a>
+  <a href="strikt.api/-assertion/index.html"><span class="keyword">interface </span><span class="identifier">Assertion</span></a>
   <br> 
   <ul> 
    <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
@@ -402,17 +369,15 @@
    <br> 
    <ul> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/assert.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/assert.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/assert">assert</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/assert">assert</span>
     <span class="symbol">:</span>&nbsp;
     <a href="strikt.api/-atomic-assertion.html"><span class="identifier">AtomicAssertion</span></a>
-    <span class="symbol">&lt;</span>
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">&gt;</span>
     <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
@@ -424,22 +389,20 @@
     <span class="symbol">&gt;</span>
     <br> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/assert.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/assert.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">assert</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/expected">expected</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/expected">expected</span>
     <span class="symbol">:</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>
     <span class="symbol">?</span>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AtomicAssertion((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/assert">assert</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$assert(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.AtomicAssertion, strikt.api.Assertion.Builder.T, kotlin.Unit)))/assert">assert</span>
     <span class="symbol">:</span>&nbsp;
     <a href="strikt.api/-atomic-assertion.html"><span class="identifier">AtomicAssertion</span></a>
-    <span class="symbol">&lt;</span>
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">&gt;</span>
     <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
@@ -451,22 +414,23 @@
     <span class="symbol">&gt;</span>
     <br> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/compose.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">compose</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/compose.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">compose</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/expected">expected</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/expected">expected</span>
     <span class="symbol">:</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>
     <span class="symbol">?</span>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/assertions">assertions</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Any, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/assertions">assertions</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion-composer/index.html"><span class="identifier">AssertionComposer</span></a>
+    <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
     <span class="symbol">&lt;</span>
     <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">&gt;</span>
     <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
@@ -478,17 +442,18 @@
     <span class="symbol">&gt;</span>
     <br> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/compose.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">compose</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/compose.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">compose</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/description">description</span><span class="symbol">:</span>&nbsp;</a>
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
     <span class="symbol">, </span>
-    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Function1((strikt.api.AssertionComposer((strikt.api.Assertion.Builder.T)), kotlin.Unit)))/assertions">assertions</span>
+    <span class="identifier" id="strikt.api.Assertion.Builder$compose(kotlin.String, kotlin.Function2((strikt.api.Assertion.Builder((strikt.api.Assertion.Builder.T)), , kotlin.Unit)))/assertions">assertions</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion-composer/index.html"><span class="identifier">AssertionComposer</span></a>
+    <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
     <span class="symbol">&lt;</span>
     <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">&gt;</span>
     <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
@@ -500,10 +465,8 @@
     <span class="symbol">&gt;</span>
     <br> 
     <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-    <a href="strikt.api/-assertion/-builder/map.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">map</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$map(kotlin.Function1((strikt.api.Assertion.Builder.T, strikt.api.Assertion.Builder.map.R)))/function">function</span><span class="symbol">:</span>&nbsp;</a>
+    <a href="strikt.api/-assertion/-builder/map.html"><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">map</span><span class="symbol">(</span><span class="identifier" id="strikt.api.Assertion.Builder$map(kotlin.Function1((strikt.api.Assertion.Builder.T, strikt.api.Assertion.Builder.map.R)))/function">function</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span></a>
     <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">.</span>
-    <span class="symbol">(</span>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="strikt.api/-assertion/-builder/map.html#R"><span class="identifier">R</span></a>
@@ -520,9 +483,8 @@
     <span class="symbol">, </span>
     <span class="identifier" id="strikt.api.Assertion.Builder$map(kotlin.String, kotlin.Function1((strikt.api.Assertion.Builder.T, strikt.api.Assertion.Builder.map.R)))/function">function</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="strikt.api/-assertion/-builder/map.html#R"><span class="identifier">R</span></a>
@@ -546,9 +508,8 @@
     <span class="symbol">, </span>
     <span class="identifier" id="strikt.api.Assertion.Builder$passesIf(kotlin.String, kotlin.Function1((strikt.api.Assertion.Builder.T, kotlin.Boolean)))/assert">assert</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>
@@ -570,9 +531,8 @@
     <span class="symbol">, </span>
     <span class="identifier" id="strikt.api.Assertion.Builder$passesIf(kotlin.String, kotlin.Any, kotlin.Function1((strikt.api.Assertion.Builder.T, kotlin.Boolean)))/assert">assert</span>
     <span class="symbol">:</span>&nbsp;
-    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
-    <span class="symbol">.</span>
     <span class="symbol">(</span>
+    <a href="strikt.api/-assertion/-builder/index.html#T"><span class="identifier">T</span></a>
     <span class="symbol">)</span>&nbsp;
     <span class="symbol">-&gt;</span>&nbsp;
     <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a>
@@ -609,37 +569,14 @@
    <a href="strikt.api/-assertion/pass.html"><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">pass</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span></a>
    <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a>
    <br> 
-   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-   <a href="strikt.api/-assertion/subject.html"><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">subject</span><span class="symbol">: </span></a>
-   <a href="strikt.api/-assertion/index.html#T"><span class="identifier">T</span></a>
-   <br> 
   </ul> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-  <a href="strikt.api/-assertion-composer/index.html"><span class="keyword">interface </span><span class="identifier">AssertionComposer</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
-  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/-assertion-composer/index.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
-  <br> 
-  <ul> 
-   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-   <a href="strikt.api/-assertion-composer/subject.html"><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">subject</span><span class="symbol">: </span></a>
-   <a href="strikt.api/-assertion-composer/index.html#T"><span class="identifier">T</span></a>
-   <br> 
-  </ul> 
-  <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-  <a href="strikt.api/-atomic-assertion.html"><span class="keyword">interface </span><span class="identifier">AtomicAssertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="strikt.api/-atomic-assertion.html"><span class="keyword">interface </span><span class="identifier">AtomicAssertion</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/-atomic-assertion.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
   <br> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-  <a href="strikt.api/-compound-assertion/index.html"><span class="keyword">interface </span><span class="identifier">CompoundAssertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="strikt.api/-compound-assertion/index.html"><span class="keyword">interface </span><span class="identifier">CompoundAssertion</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
   <a href="strikt.api/-assertion/index.html"><span class="identifier">Assertion</span></a>
-  <span class="symbol">&lt;</span>
-  <a href="strikt.api/-compound-assertion/index.html#T"><span class="identifier">T</span></a>
-  <span class="symbol">&gt;</span>
   <br> 
   <ul> 
    <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
@@ -664,11 +601,8 @@
   <br> 
   <ul> 
    <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
-   <a href="strikt.api/-compound-assertions/then.html"><span class="keyword">abstract</span> <span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">then</span><span class="symbol">(</span><span class="identifier" id="strikt.api.CompoundAssertions$then(kotlin.Function1((strikt.api.CompoundAssertion((strikt.api.CompoundAssertions.T)), kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;</a>
+   <a href="strikt.api/-compound-assertions/then.html"><span class="keyword">abstract</span> <span class="keyword">infix</span> <span class="keyword">fun </span><span class="identifier">then</span><span class="symbol">(</span><span class="identifier" id="strikt.api.CompoundAssertions$then(kotlin.Function1((strikt.api.CompoundAssertion, kotlin.Unit)))/block">block</span><span class="symbol">:</span>&nbsp;</a>
    <a href="strikt.api/-compound-assertion/index.html"><span class="identifier">CompoundAssertion</span></a>
-   <span class="symbol">&lt;</span>
-   <a href="strikt.api/-compound-assertions/index.html#T"><span class="identifier">T</span></a>
-   <span class="symbol">&gt;</span>
    <span class="symbol">.</span>
    <span class="symbol">(</span>
    <span class="symbol">)</span>&nbsp;
@@ -1189,6 +1123,48 @@
   <span class="symbol">&gt;</span>
   <br> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
+  <a href="strikt.assertions/get.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalAccessor.html"><span class="identifier">TemporalAccessor</span></a>
+  <span class="symbol">&gt;</span> 
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/get.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <span class="symbol">.</span>
+  <span class="identifier">get</span>
+  <span class="symbol">(</span>
+  <span class="identifier" id="strikt.assertions$get(strikt.api.Assertion.Builder((strikt.assertions.get.T)), java.time.temporal.TemporalField)/field">field</span>
+  <span class="symbol">:</span>&nbsp;
+  <a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalField.html"><span class="identifier">TemporalField</span></a>
+  <span class="symbol">)</span>
+  <span class="symbol">: </span>
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>
+  <span class="symbol">&gt;</span>
+  <br> 
+  <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
+  <a href="strikt.assertions/get-long.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalAccessor.html"><span class="identifier">TemporalAccessor</span></a>
+  <span class="symbol">&gt;</span> 
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/get-long.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <span class="symbol">.</span>
+  <span class="identifier">getLong</span>
+  <span class="symbol">(</span>
+  <span class="identifier" id="strikt.assertions$getLong(strikt.api.Assertion.Builder((strikt.assertions.getLong.T)), java.time.temporal.TemporalField)/field">field</span>
+  <span class="symbol">:</span>&nbsp;
+  <a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalField.html"><span class="identifier">TemporalField</span></a>
+  <span class="symbol">)</span>
+  <span class="symbol">: </span>
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a>
+  <span class="symbol">&gt;</span>
+  <br> 
+  <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
   <a href="strikt.assertions/has-entry.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a>
   <span class="symbol">&lt;</span>
@@ -1286,6 +1262,48 @@
   <span class="symbol">&gt;</span>
   <br> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
+  <a href="strikt.assertions/is-after.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalAccessor.html"><span class="identifier">TemporalAccessor</span></a>
+  <span class="symbol">&gt;</span> 
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/is-after.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <span class="symbol">.</span>
+  <span class="identifier">isAfter</span>
+  <span class="symbol">(</span>
+  <span class="identifier" id="strikt.assertions$isAfter(strikt.api.Assertion.Builder((strikt.assertions.isAfter.T)), java.time.temporal.TemporalAccessor)/expected">expected</span>
+  <span class="symbol">:</span>&nbsp;
+  <a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalAccessor.html"><span class="identifier">TemporalAccessor</span></a>
+  <span class="symbol">)</span>
+  <span class="symbol">: </span>
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/is-after.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <br> 
+  <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
+  <a href="strikt.assertions/is-before.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalAccessor.html"><span class="identifier">TemporalAccessor</span></a>
+  <span class="symbol">&gt;</span> 
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/is-before.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <span class="symbol">.</span>
+  <span class="identifier">isBefore</span>
+  <span class="symbol">(</span>
+  <span class="identifier" id="strikt.assertions$isBefore(strikt.api.Assertion.Builder((strikt.assertions.isBefore.T)), java.time.temporal.TemporalAccessor)/expected">expected</span>
+  <span class="symbol">:</span>&nbsp;
+  <a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalAccessor.html"><span class="identifier">TemporalAccessor</span></a>
+  <span class="symbol">)</span>
+  <span class="symbol">: </span>
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/is-before.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <br> 
+  <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
   <a href="strikt.assertions/is-empty.html"><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
   <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html"><span class="identifier">Collection</span></a>
   <span class="symbol">&lt;</span>
@@ -1317,9 +1335,9 @@
   <span class="symbol">.</span>
   <span class="identifier">isEqualTo</span>
   <span class="symbol">(</span>
-  <span class="identifier" id="strikt.assertions$isEqualTo(strikt.api.Assertion.Builder((strikt.assertions.isEqualTo.T)), kotlin.Any)/expected">expected</span>
+  <span class="identifier" id="strikt.assertions$isEqualTo(strikt.api.Assertion.Builder((strikt.assertions.isEqualTo.T)), strikt.assertions.isEqualTo.T)/expected">expected</span>
   <span class="symbol">:</span>&nbsp;
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>
+  <a href="strikt.assertions/is-equal-to.html#T"><span class="identifier">T</span></a>
   <span class="symbol">?</span>
   <span class="symbol">)</span>
   <span class="symbol">: </span>
@@ -1558,9 +1576,9 @@
   <span class="symbol">.</span>
   <span class="identifier">isNotEqualTo</span>
   <span class="symbol">(</span>
-  <span class="identifier" id="strikt.assertions$isNotEqualTo(strikt.api.Assertion.Builder((strikt.assertions.isNotEqualTo.T)), kotlin.Any)/expected">expected</span>
+  <span class="identifier" id="strikt.assertions$isNotEqualTo(strikt.api.Assertion.Builder((strikt.assertions.isNotEqualTo.T)), strikt.assertions.isNotEqualTo.T)/expected">expected</span>
   <span class="symbol">:</span>&nbsp;
-  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a>
+  <a href="strikt.assertions/is-not-equal-to.html#T"><span class="identifier">T</span></a>
   <span class="symbol">?</span>
   <span class="symbol">)</span>
   <span class="symbol">: </span>
@@ -1759,6 +1777,22 @@
   <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
   <span class="symbol">&lt;</span>
   <a href="strikt.assertions/matches-ignoring-case.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <br> 
+  <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>
+  <a href="strikt.assertions/message.html"><span class="keyword">val </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;</a>
+  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a>
+  <span class="symbol">&gt;</span> 
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="strikt.assertions/message.html#T"><span class="identifier">T</span></a>
+  <span class="symbol">&gt;</span>
+  <span class="symbol">.</span>
+  <span class="identifier">message</span>
+  <span class="symbol">: </span>
+  <a href="strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a>
+  <span class="symbol">&lt;</span>
+  <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a>
   <span class="symbol">&gt;</span>
   <br> 
   <a href="/Users/rfletcher/Development/strikt/strikt-core/build/javadoc/strikt-core/index"></a>

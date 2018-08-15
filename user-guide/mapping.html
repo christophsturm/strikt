@@ -81,12 +81,12 @@ expect(person.name).isEqualTo("Ziggy")
 <p>Sometimes it's useful to be able to transform an assertion on a subject to an assertion on a property of that subject, or the result of a method call. Particularly when using soft assertion blocks.</p> 
 <p>Strikt allows for this using the <code>Assertion.Builder&lt;T&gt;.map</code> method.</p> 
 <h2>Mapping with lambdas</h2> 
-<p>The method takes a lambda whose receiver is the current subject and returns an <code>Assertion.Builder&lt;R&gt;</code> where <code>R</code> is the type of whatever the lambda returns.</p> 
+<p>The method takes a lambda whose parameter is the current subject and returns an <code>Assertion.Builder&lt;R&gt;</code> where <code>R</code> is the type of whatever the lambda returns.</p> 
 <p>This is sometimes useful for making assertions about the properties of an object or the values returned by methods, particularly if you want to use a block-style assertion to validate multiple object properties.</p> 
 <pre><code class="language-kotlin">val subject = Person(name = "David", birthDate = LocalDate.of(1947, 1, 8))
 expect(subject) {
-  map { name }.isEqualTo("David")
-  map { birthDate.year }.isEqualTo(1947)
+  map { it.name }.isEqualTo("David")
+  map { it.birthDate.year }.isEqualTo(1947)
 }
 </code></pre> 
 <h2>Mapping with property or method references</h2> 
@@ -119,7 +119,7 @@ expect(subject) {
   get() = map(Person::name)
 
 val Assertion.Builder&lt;Person&gt;.yearOfBirth: Assertion.Builder&lt;LocalDate&gt;
-  get() = map { dateOfBirth.year }
+  get() = map("year of birth") { it.dateOfBirth.year }
 </code></pre> 
 <p>You can then write the earlier example as:</p> 
 <pre><code class="language-kotlin">val subject = Person(name = "David", birthDate = LocalDate.of(1947, 1, 8))

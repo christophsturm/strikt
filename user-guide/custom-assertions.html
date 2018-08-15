@@ -80,7 +80,7 @@
 <p>Let's imagine we're implementing an assertion function for <code>java.time.LocalDate</code> that tests if the represented date is a leap day.</p> 
 <pre><code class="language-kotlin">fun Assertion.Builder&lt;LocalDate&gt;.isStTibsDay(): Assertion.Builder&lt;LocalDate&gt; =
   assert("is St. Tib's Day") { 
-    when (MonthDay.from(subject)) {
+    when (MonthDay.from(it)) {
       MonthDay.of(2, 29) -&gt; pass()
       else               -&gt; fail()
     }
@@ -91,19 +91,19 @@
  <li>We declare the assertion function applies only to <code>Assertion.Builder&lt;LocalDate&gt;</code>.</li> 
  <li>Note that the function also returns <code>Assertion.Builder&lt;LocalDate&gt;</code> so we can include this assertion as part of a chain.</li> 
  <li>We call <code>assert</code> passing a description of the assertion and a lambda with the assertion logic.</li> 
- <li>If <code>subject</code> is the value we want we call <code>pass()</code> otherwise we call <code>fail()</code></li> 
+ <li>If <code>it</code> (the test subject) is the value we want we call <code>pass()</code> otherwise we call <code>fail()</code></li> 
 </ol> 
 <p>If this assertion fails it will produce a message like:</p> 
 <pre><code>▼ Expect that 2018-05-01:
   ✗ is St. Tib's Day 
 </code></pre> 
-<p>!!! note The method <code>assert</code> accepts a description for the assertion being made and a lambda function <code>Assertion&lt;T&gt;.() -&gt; Unit</code>. That <code>Assertion&lt;T&gt;</code> receiver provides the lambda everything it needs to access the <code>subject</code> of the assertion and report the result via the <code>pass()</code> or <code>fail()</code> method.</p> 
+<p>!!! note The method <code>assert</code> accepts a description for the assertion being made and a lambda function <code>Assertion&lt;T&gt;.(T) -&gt; Unit</code>. The parameter passed to the lambda is the assertion subject. The <code>Assertion&lt;T&gt;</code> receiver provides the lambda the <code>pass()</code> and <code>fail()</code> methods for reporting the assertion result.</p> 
 <h2>Describing the "actual" value</h2> 
 <p>For assertions that perform a comparison between actual and expected values it is usually helpful to describe the value that was incorrect. That way any assertion failure message will be more helpful.</p> 
 <p>In order to do this, Strikt provides an overridden version of <code>fail()</code> that accepts a message string and the actual value found. The message string should contain a format placeholder for the value.</p> 
 <pre><code class="language-kotlin">fun Assertion.Builder&lt;LocalDate&gt;.isStTibsDay(): Assertion.Builder&lt;LocalDate&gt; =
   assert("is St. Tib's Day") { 
-    when (MonthDay.from(subject)) {
+    when (MonthDay.from(it)) {
       MonthDay.of(2, 29) -&gt; pass()
       else               -&gt; fail(
         message = "in fact it is %s", 
@@ -118,11 +118,11 @@
 </code></pre> 
 <p>In this case that's not terribly helpful but when dealing with properties, method return values, or the like it can save a lot of effort in identifying the precise cause of an error.</p> 
 <h2>Simple atomic assertions with boolean expressions</h2> 
-<p>For the simplest assertion functions, instead of using <code>assert</code> and calling <code>pass</code> or <code>fail</code>, you can use <code>passesIf</code> with a lambda whose receiver is the assertion subject that returns a boolean.</p> 
+<p>For the simplest assertion functions, instead of using <code>assert</code> and calling <code>pass</code> or <code>fail</code>, you can use <code>passesIf</code> with a lambda whose parameter is the assertion subject that returns a boolean.</p> 
 <p>We can re-implement the example above like this:</p> 
 <pre><code class="language-kotlin">fun Assertion.Builder&lt;LocalDate&gt;.isStTibsDay(): Assertion.Builder&lt;LocalDate&gt; =
   passesIf("is St. Tib's Day") { 
-    MonthDay.from(this) == MonthDay.of(2, 29)
+    MonthDay.from(it) == MonthDay.of(2, 29)
   }
 </code></pre> 
 <p>You should not use this form when you want to provide a meaningful description of the actual value but for simple assertions it's slightly less verbose.</p> 
@@ -135,7 +135,7 @@
 </ul> 
 <p>Imagine we're creating an assertion function that tests fails if any element of a collection is <code>null</code>.</p> 
 <pre><code class="language-kotlin">fun &lt;T: Iterable&lt;E?&gt;, E&gt; Assertion.Builder&lt;T&gt;.containsNoNullElements(): Assertion.Builder&lt;T&gt; =
-  compose("does not contain any null elements") {
+  compose("does not contain any null elements") { subject -&gt;
     subject.forEach {
       expect(it).isNotNull()
     }
@@ -150,7 +150,7 @@
  <li>Inside the <code>compose</code> block we make assertions about each element of the iterable subject.</li> 
  <li>Inside the <code>then</code> block we pass or fail the overall assertion depending on whether the nested assertions all passed.</li> 
 </ol> 
-<p>The receiver of the block passed to <code>result</code> has the properties <code>allFailed</code>, <code>anyFailed</code>, <code>allPassed</code> and <code>anyPassed</code> along with <code>pass()</code> and <code>fail()</code> functions similar to those used in simple assertions.</p> 
+<p>The receiver of the block passed to <code>result</code> has the properties <code>allFailed</code>, <code>anyFailed</code>, <code>allPassed</code> and <code>anyPassed</code> along with <code>pass()</code> and <code>fail()</code> functions used in simple assertions.</p> 
 <p>If the assertion failed we'll see something like this:</p> 
 <pre><code>▼ Expect that ["catflap", null, "rubberplant", "marzipan"]: 
   ✗ does not contain any null elements

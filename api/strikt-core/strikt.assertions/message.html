@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-<title>Getting Started</title>
+<title> Strikt</title>
 
 <!-- CSS  -->
 <link href="/css/bulma.min.css" type="text/css"
@@ -72,38 +72,16 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><h1>Getting Started</h1> 
-<p>Strikt does not depend on any particular test runner. It can be used with JUnit, Spek or any other runner that supports tests written in Kotlin.</p> 
-<h2>Installation</h2> 
-<p>Strikt is available from JCenter. Add the following to your <code>build.gradle</code>.</p> 
-<pre><code class="language-groovy">repositories {
-  jcenter()
-}
-
-dependencies {
-  testCompile "io.strikt:strikt-core:0.11.0"
-}
-</code></pre> 
-<h2>Importing the Strikt API</h2> 
-<p>Add the following imports to your test:</p> 
-<pre><code class="language-kotlin">import strikt.api.*
-import strikt.assertions.*
-</code></pre> 
-<p>The <code>strikt.api</code> package contains top level functions such as <code>expect</code> and <code>throws</code> that you will use to create assertions as well as the API classes you will interact with if you decide to implement your own assertion functions. The <code>strikt.assertions</code> package contains the standard library of assertion functions.</p></div>
-  <nav class="pagination is-medium" role="navigation" aria-label="pagination">
-    <a class="pagination-previous button is-large is-link is-outlined"
-       disabled>
-      <span class="icon">
-        <i class="fas fa-arrow-left"></i>
-      </span>
-    </a>
-    <a class="pagination-next button is-large is-link is-outlined" href="assertion-styles.html"
-       >
-      <span class="icon">
-        <i class="fas fa-arrow-right"></i>
-      </span>
-    </a>
-  </nav>
+        <div class="content is-medium"><a href="../index.html">strikt-core</a>&nbsp;/&nbsp;
+<a href="index.html">strikt.assertions</a>&nbsp;/&nbsp;
+<a href="./message.html">message</a>
+<br> 
+<br> 
+<h1>message</h1> 
+<a name="strikt.assertions$message#strikt.api.Assertion.Builder((strikt.assertions.message.T))"></a> 
+<code><span class="keyword">val </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">&gt;</span> <a href="../strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="message.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">message</span><span class="symbol">: </span><a href="../strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code> 
+<p>Maps an assertion on a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a> to an assertion on its message. This mapping also asserts that the message is not <code>null</code>. This is particularly useful after <a href="throws.html">throws</a>.</p> 
+<p><strong>Author</strong><br> <a href="https://github.com/xhanin">Xavier Hanin</a></p></div>
       </div>
     </div>
   </div>

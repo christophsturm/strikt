@@ -82,27 +82,23 @@
  <tbody> 
   <tr> 
    <td> <p><a href="-assertion/index.html">Assertion</a></p> </td> 
-   <td> <code><span class="keyword">interface </span><span class="identifier">Assertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code> <p>Allows assertion implementations to assertAll <a href="-assertion/subject.html">subject</a> and determine a result.</p> </td> 
-  </tr> 
-  <tr> 
-   <td> <p><a href="-assertion-composer/index.html">AssertionComposer</a></p> </td> 
-   <td> <code><span class="keyword">interface </span><span class="identifier">AssertionComposer</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-assertion/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="-assertion-composer/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <p>Allows assertions to be composed, or nested. This class is the receiver of the lambda passed to <a href="-assertion/-builder/compose.html">Builder.compose</a>.</p> </td> 
+   <td> <code><span class="keyword">interface </span><span class="identifier">Assertion</span></code> <p>Allows assertion implementations to determine a result.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="-atomic-assertion.html">AtomicAssertion</a></p> </td> 
-   <td> <code><span class="keyword">interface </span><span class="identifier">AtomicAssertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="-atomic-assertion.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <p>An assertion of a single condition on a subject.</p> </td> 
+   <td> <code><span class="keyword">interface </span><span class="identifier">AtomicAssertion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-assertion/index.html"><span class="identifier">Assertion</span></a></code> <p>An assertion of a single condition on a subject.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="-compound-assertion/index.html">CompoundAssertion</a></p> </td> 
-   <td> <code><span class="keyword">interface </span><span class="identifier">CompoundAssertion</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-assertion/index.html"><span class="identifier">Assertion</span></a><span class="symbol">&lt;</span><a href="-compound-assertion/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <p>An assertion composed of multiple conditions whose overall result is determined by some aggregation of those conditions' results.</p> </td> 
+   <td> <code><span class="keyword">interface </span><span class="identifier">CompoundAssertion</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-assertion/index.html"><span class="identifier">Assertion</span></a></code> <p>An assertion composed of multiple conditions whose overall result is determined by some aggregation of those conditions' results.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="-compound-assertions/index.html">CompoundAssertions</a></p> </td> 
-   <td> <code><span class="keyword">interface </span><span class="identifier">CompoundAssertions</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code></td> 
+   <td> <code><span class="keyword">interface </span><span class="identifier">CompoundAssertions</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span></code> <p>Returned by <a href="-assertion/-builder/compose.html">Assertion.Builder.compose</a> allowing a bridge between evaluation of composed assertions and the determination of the overall result in the <code>block</code> parameter passed to <a href="-compound-assertions/then.html">then</a>.</p> </td> 
   </tr> 
   <tr> 
    <td> <p><a href="-describeable-builder/index.html">DescribeableBuilder</a></p> </td> 
-   <td> <code><span class="keyword">interface </span><span class="identifier">DescribeableBuilder</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-assertion/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="-describeable-builder/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code></td> 
+   <td> <code><span class="keyword">interface </span><span class="identifier">DescribeableBuilder</span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-assertion/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="-describeable-builder/index.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code> <p>Extension of <a href="-assertion/-builder/index.html">Assertion.Builder</a> that enables the description of the assertion subject.</p> </td> 
   </tr> 
  </tbody> 
 </table> 

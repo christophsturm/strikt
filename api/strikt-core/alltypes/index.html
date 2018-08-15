@@ -77,11 +77,7 @@
  <tbody> 
   <tr> 
    <td> <a href="../strikt.api/-assertion/index.html">strikt.api.Assertion</a></td> 
-   <td> <p>Allows assertion implementations to assertAll <a href="../strikt.api/-assertion/subject.html">subject</a> and determine a result.</p> </td> 
-  </tr> 
-  <tr> 
-   <td> <a href="../strikt.api/-assertion-composer/index.html">strikt.api.AssertionComposer</a></td> 
-   <td> <p>Allows assertions to be composed, or nested. This class is the receiver of the lambda passed to <a href="../strikt.api/-assertion/-builder/compose.html">Builder.compose</a>.</p> </td> 
+   <td> <p>Allows assertion implementations to determine a result.</p> </td> 
   </tr> 
   <tr> 
    <td> <a href="../strikt.api/-atomic-assertion.html">strikt.api.AtomicAssertion</a></td> 
@@ -93,11 +89,11 @@
   </tr> 
   <tr> 
    <td> <a href="../strikt.api/-compound-assertions/index.html">strikt.api.CompoundAssertions</a></td> 
-   <td> </td> 
+   <td> <p>Returned by <a href="../strikt.api/-assertion/-builder/compose.html">Assertion.Builder.compose</a> allowing a bridge between evaluation of composed assertions and the determination of the overall result in the <code>block</code> parameter passed to <a href="../strikt.api/-compound-assertions/then.html">then</a>.</p> </td> 
   </tr> 
   <tr> 
    <td> <a href="../strikt.api/-describeable-builder/index.html">strikt.api.DescribeableBuilder</a></td> 
-   <td> </td> 
+   <td> <p>Extension of <a href="../strikt.api/-assertion/-builder/index.html">Assertion.Builder</a> that enables the description of the assertion subject.</p> </td> 
   </tr> 
  </tbody> 
 </table></div>

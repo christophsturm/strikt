@@ -72,18 +72,20 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-10-desktop">
-        <div class="content is-medium"><a href="../../index.html">strikt-core</a>&nbsp;/&nbsp;
-<a href="../index.html">strikt.api</a>&nbsp;/&nbsp;
-<a href="index.html">AssertionComposer</a>&nbsp;/&nbsp;
-<a href="./subject.html">subject</a>
+        <div class="content is-medium"><a href="../index.html">strikt-core</a>&nbsp;/&nbsp;
+<a href="index.html">strikt.assertions</a>&nbsp;/&nbsp;
+<a href="./get-long.html">getLong</a>
 <br> 
 <br> 
-<h1>subject</h1> 
-<a name="strikt.api.AssertionComposer$subject"></a> 
-<code><span class="keyword">abstract</span> <span class="keyword">val </span><span class="identifier">subject</span><span class="symbol">: </span><a href="index.html#T"><span class="identifier">T</span></a></code> 
-<p>The subject of the assertion.</p> 
-<h3>Property</h3> 
-<p><a name="subject"></a> <code>subject</code> - The subject of the assertion.</p></div>
+<h1>getLong</h1> 
+<a name="strikt.assertions$getLong(strikt.api.Assertion.Builder((strikt.assertions.getLong.T)), java.time.temporal.TemporalField)"></a> 
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalAccessor.html"><span class="identifier">TemporalAccessor</span></a><span class="symbol">&gt;</span> <a href="../strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="get-long.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">getLong</span><span class="symbol">(</span><span class="identifier" id="strikt.assertions$getLong(strikt.api.Assertion.Builder((strikt.assertions.getLong.T)), java.time.temporal.TemporalField)/field">field</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalField.html"><span class="identifier">TemporalField</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../strikt.api/-assertion/-builder/index.html"><span class="identifier">Builder</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a><span class="symbol">&gt;</span></code> 
+<p>Maps an assertion on the subject to an assertion on the value of the specified temporal field.</p> 
+<h3>Exceptions</h3> 
+<p><a name="java.time.temporal.UnsupportedTemporalTypeException"></a> <code>java.time.temporal.UnsupportedTemporalTypeException</code> - if the subject does not support the <a href="get-long.html#strikt.assertions$getLong(strikt.api.Assertion.Builder((strikt.assertions.getLong.T)), java.time.temporal.TemporalField)/field">field</a> type.</p> 
+<p><strong>See Also</strong><br> </p>
+<p><a href="http://docs.oracle.com/javase/9/docs/api/java/time/temporal/TemporalAccessor.html#getLong(java.time.temporal.TemporalField)">TemporalAccessor.getLong</a></p> 
+<p></p></div>
       </div>
     </div>
   </div>
