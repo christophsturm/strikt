@@ -1,5 +1,6 @@
 $dokka.format:html
 $dokka.linkExtension:html
-
+$dokka.location:strikt.internal.reporting$toHex(kotlin.ByteArray)strikt.internal.reporting/kotlin.-byte-array/to-hex.html
 strikt.api
 strikt.assertions
+strikt.internal.reporting

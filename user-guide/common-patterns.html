@@ -74,6 +74,15 @@
       <div class="column is-10-desktop">
         <div class="content is-medium"><h1>Common Assertion Patterns</h1> 
 <p>This section contains some common uses of Strikt's standard assertion library.</p> 
+<h2>Grouping assertions after a null-check</h2> 
+<p>If the declared type of the assertion subject is nullable it can be awkward to use a block of assertions directly with <code>expect</code> as every individual assertion in the block needs to deal with the nullable type. Instead Strikt provides the <code>and</code> method that may be used to add a block of assertions to a chain. For example:</p> 
+<pre><code class="language-kotlin">expect(subject)
+  .isNotNull()
+  .and {
+    // perform other assertions on a known non-null subject 
+  }
+</code></pre> 
+<p>The type after <code>expect</code> is <code>Assertion.Builder&lt;T?&gt;</code> (assuming <code>subject</code> has a nullable declared type) but the receiever of <code>and</code> is <code>Assertion.Builder&lt;T&gt;</code> as <code>isNotNull</code> has narrowed the subject type.</p> 
 <h2>Assertions on elements of a collection</h2> 
 <p>Some assertions on collections include sub-assertions applied to the elements of the collection. For example, we can assert that <em>all</em> elements conform to a repeated assertion.</p> 
 <pre><code class="language-kotlin">val subject = setOf("catflap", "rubberplant", "marzipan")
